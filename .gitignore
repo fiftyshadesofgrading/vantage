@@ -1,0 +1,5 @@
+# full-resolution downloads from tools/fetch_art.py (can be hundreds of MB)
+art/originals/
+__pycache__/
+art/library/
+harvest/cache/

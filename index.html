@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3eee3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Walk Cape Ann to the spots where Fitz Henry Lane, Homer, Hassam and Hopper set up their easels, and ghost their pictures over the real view.">
+<title>Vantage · Cape Ann</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="engraving" data-sheet="peek">
+<div id="map" aria-label="Map of painting vantage points"></div>
+
+<header id="topbar">
+  <a class="brand" href="./" title="Vantage — home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 4 26h24Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 4v22M9 18h14" stroke="currentColor" stroke-width="1.2" opacity=".55"/><circle cx="16" cy="18" r="2.4" fill="currentColor"/></svg>
+    <span class="name">Vantage</span><span class="region">Cape Ann</span>
+  </a>
+  <div class="tools">
+    <button id="btnLocate" class="icon-btn" title="Find me" aria-label="Find my location">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+    <button id="btnHelp" class="icon-btn" title="How this works" aria-label="How this works">?</button>
+  </div>
+</header>
+
+<div id="banner" hidden></div>
+<div id="toast" role="status" hidden></div>
+
+<section id="sheet" data-state="peek">
+  <button class="grab" id="grab" aria-label="Resize panel"><span></span></button>
+  <div id="sheetBody"><p class="loading">Unrolling the charts…</p></div>
+</section>
+
+<!-- ghost / photo-match view -->
+<section id="ar" hidden>
+  <video id="arVideo" playsinline muted autoplay></video>
+  <img id="arStill" alt="" hidden>
+  <div id="arClip"><div id="arGhost"><img id="arImg" alt="" draggable="false"></div></div>
+  <div id="arSplit" hidden><span></span></div>
+
+  <div class="ar-top ar-ui">
+    <button id="arClose" class="ar-btn" aria-label="Close">✕</button>
+    <div class="ar-title"><b id="arTitle"></b><small id="arSub"></small></div>
+    <button id="arCal" class="ar-btn" aria-label="Calibrate">
+      <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+    </button>
+  </div>
+
+  <div class="ar-guide ar-ui">
+    <div class="g-row"><span id="arArrow" class="arrow">➤</span><span id="arDist"></span></div>
+    <div class="tape"><i class="centre"></i><i id="tapeMark" class="mark idle"></i></div>
+    <div id="arTurn" class="turn"></div>
+    <div id="arHint" class="hint"></div>
+  </div>
+
+  <div class="ar-bottom ar-ui">
+    <div class="seg" id="arMode"><button data-mode="ghost" class="on">Ghost</button><button data-mode="swipe">Swipe</button></div>
+    <label class="op"><span>Fade</span><input id="arOpacity" type="range" min="5" max="100" aria-label="Painting opacity"></label>
+    <div class="row">
+      <button id="arPhoto" class="ar-small">Photo</button>
+      <button id="arFreeze" class="ar-small">Hold</button>
+      <button id="arShutter" class="shutter" aria-label="Save then-and-now image"></button>
+      <button id="arFit" class="ar-small">Fit</button>
+    </div>
+    <p class="tip">Drag to move · pinch to size &amp; rotate · double-tap to reset</p>
+  </div>
+
+  <div id="arDrawer" class="ar-ui" hidden>
+    <div class="dr-head"><h4>Field calibration</h4><button id="calClose" class="ar-btn small" aria-label="Close">✕</button></div>
+    <p id="calStatus" class="cal-status"></p>
+    <p class="cal-help">Stand where the picture lines up, match it to the scene, then save. Your GPS spot, compass bearing and the picture's angular width are recorded for this view.</p>
+    <label class="rng">Camera field of view <output id="fovOut"></output><input type="range" id="camFov" min="40" max="110" step="1"></label>
+    <label class="chk"><input type="checkbox" id="track"> Slide the picture with the compass</label>
+    <div class="crop"><span>Trim frame edges</span>
+      <div id="cropRow"><label>L<input type="range" min="0" max="25" step="0.5"></label><label>T<input type="range" min="0" max="25" step="0.5"></label><label>R<input type="range" min="0" max="25" step="0.5"></label><label>B<input type="range" min="0" max="25" step="0.5"></label></div>
+    </div>
+    <div class="dr-btns"><button id="calSave" class="pill">Save this alignment</button><button id="calReset" class="pill ghost">Reset</button></div>
+    <button id="calExport" class="pill ghost wide">Export all calibrations (.json)</button>
+  </div>
+  <div id="arMsg" class="ar-ui" hidden></div>
+  <div id="arFlash" hidden></div>
+</section>
+
+<!-- high-res viewer -->
+<section id="viewer" hidden>
+  <div id="vStage"><img id="vImg" alt="" draggable="false"></div>
+  <div class="v-top"><span id="vCap"></span><button id="vClose" class="ar-btn" aria-label="Close">✕</button></div>
+  <div class="v-bot"><span id="vInfo"></span><a id="vDownload" target="_blank" rel="noopener"></a></div>
+</section>
+
+<dialog id="help">
+  <h2>How Vantage works</h2>
+  <p>Each pin marks where an artist or photographer stood. The shaded cone shows which way they looked and roughly how wide their picture spans.</p>
+  <ol>
+    <li><b>Walk there.</b> Open a pin, tap <i>Walk there</i>, or just follow the distance readout.</li>
+    <li><b>Ghost view.</b> The camera opens with the picture floating over it. Turn until the guide says you're facing the view. Fade or swipe between then and now.</li>
+    <li><b>Photo match.</b> Take a photo, then line the picture up on it. This works on any connection and lets you fine-tune slowly.</li>
+    <li><b>Save.</b> The round button saves a then-and-now image.</li>
+  </ol>
+  <h3>How sure is each pin?</h3>
+  <p><i class="cdot conf-documented"></i> <b>Documented</b>: from a published viewpoint map or catalogue note, mostly the Cape Ann Museum's <a href="https://www.fitzhenrylaneonline.org/" target="_blank" rel="noopener">Fitz Henry Lane Online</a>.<br>
+     <i class="cdot conf-inferred"></i> <b>Inferred</b>: worked out from the title and the lie of the land.<br>
+     <i class="cdot conf-general"></i> <b>General</b>: the right area, but the exact spot is unknown.</p>
+  <h3>Field calibration</h3>
+  <p>When a picture lines up, tap ◎ in the ghost view and <i>Save this alignment</i>. That records your GPS position, the bearing and the picture's angular width on this phone. Export the file and drop it into <code>data/calibrations.json</code> on the server so every device gets the corrected pins.</p>
+  <p><button class="pill ghost" id="helpExport">Export my calibrations</button></p>
+  <h3>Camera, GPS and compass</h3>
+  <p>Browsers only allow these on HTTPS pages. On the plain-HTTP homelab address, use <i>Photo match</i>, or open the Tailscale HTTPS address described in the README. Long-press the map to simulate standing somewhere.</p>
+  <p class="small">Images come from Wikimedia Commons, all public domain. Pictures painted from a boat are marked; on private ground you can usually see the same scene from the road. Please respect property.</p>
+  <p class="small"><a href="about.html">About Vantage</a> · free, public-domain art, CC BY data.</p>
+  <button class="pill" id="helpClose">Close</button>
+</dialog>
+
+<input type="file" id="fileCapture" accept="image/*" capture="environment" hidden>
+<input type="file" id="fileChoose" accept="image/*" hidden>
+<script>
+  // Opened straight from disk: browsers block module scripts and fetch() on file:// pages.
+  if (location.protocol === "file:") {
+    document.getElementById("sheetBody").innerHTML =
+      '<p class="loading">This page has to come from a web server — browsers block its scripts and data when it’s opened as a file.<br><br>' +
+      'Open <a href="http://192.168.50.88:8888/vantage/">http://192.168.50.88:8888/vantage/</a> instead.</p>';
+  }
+</script>
+<script src="lib/leaflet/leaflet.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
