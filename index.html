@@ -4,131 +4,203 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f3eee3">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="description" content="Walk Cape Ann to the spots where Fitz Henry Lane, Homer, Hassam and Hopper set up their easels, and ghost their pictures over the real view.">
-<title>Vantage · Cape Ann</title>
+<meta name="description" content="Vantage pins historic paintings and photographs of Cape Ann and Portland, Maine where they were made, so you can stand on the spot and see then over now. Free, public-domain art, Creative Commons data.">
+<title>Vantage · Stand where they stood</title>
+<link rel="canonical" href="https://herebe.art/">
+<meta property="og:title" content="Vantage — stand where they stood">
+<meta property="og:url" content="https://herebe.art/">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="lib/leaflet/leaflet.css">
-<link rel="stylesheet" href="css/app.css">
-</head>
-<body class="engraving" data-sheet="peek">
-<div id="map" aria-label="Map of painting vantage points"></div>
-
-<header id="topbar">
-  <a class="brand" href="./" title="Vantage — home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 4 26h24Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 4v22M9 18h14" stroke="currentColor" stroke-width="1.2" opacity=".55"/><circle cx="16" cy="18" r="2.4" fill="currentColor"/></svg>
-    <span class="name">Vantage</span><span class="region">Cape Ann</span>
-  </a>
-  <div class="tools">
-    <button id="btnLocate" class="icon-btn" title="Find me" aria-label="Find my location">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3" stroke="currentColor" stroke-width="1.6"/></svg>
-    </button>
-    <button id="btnHelp" class="icon-btn" title="How this works" aria-label="How this works">?</button>
-  </div>
-</header>
-
-<div id="banner" hidden></div>
-<div id="toast" role="status" hidden></div>
-
-<section id="sheet" data-state="peek">
-  <button class="grab" id="grab" aria-label="Resize panel"><span></span></button>
-  <div id="sheetBody"><p class="loading">Unrolling the charts…</p></div>
-</section>
-
-<!-- ghost / photo-match view -->
-<section id="ar" hidden>
-  <video id="arVideo" playsinline muted autoplay></video>
-  <img id="arStill" alt="" hidden>
-  <div id="arClip"><div id="arGhost"><img id="arImg" alt="" draggable="false"></div></div>
-  <div id="arSplit" hidden><span></span></div>
-
-  <div class="ar-top ar-ui">
-    <button id="arClose" class="ar-btn" aria-label="Close">✕</button>
-    <div class="ar-title"><b id="arTitle"></b><small id="arSub"></small></div>
-    <button id="arCal" class="ar-btn" aria-label="Calibrate">
-      <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
-    </button>
-  </div>
-
-  <div class="ar-guide ar-ui">
-    <div class="g-row"><span id="arArrow" class="arrow">➤</span><span id="arDist"></span></div>
-    <div class="tape"><i class="centre"></i><i id="tapeMark" class="mark idle"></i></div>
-    <div id="arTurn" class="turn"></div>
-    <div id="arHint" class="hint"></div>
-  </div>
-
-  <div class="ar-bottom ar-ui">
-    <div class="seg" id="arMode"><button data-mode="ghost" class="on">Ghost</button><button data-mode="swipe">Swipe</button></div>
-    <label class="op"><span>Fade</span><input id="arOpacity" type="range" min="5" max="100" aria-label="Painting opacity"></label>
-    <div class="row">
-      <button id="arPhoto" class="ar-small">Photo</button>
-      <button id="arFreeze" class="ar-small">Hold</button>
-      <button id="arShutter" class="shutter" aria-label="Save then-and-now image"></button>
-      <button id="arFit" class="ar-small">Fit</button>
-    </div>
-    <p class="tip">Drag to move · pinch to size &amp; rotate · double-tap to reset</p>
-  </div>
-
-  <div id="arDrawer" class="ar-ui" hidden>
-    <div class="dr-head"><h4>Field calibration</h4><button id="calClose" class="ar-btn small" aria-label="Close">✕</button></div>
-    <p id="calStatus" class="cal-status"></p>
-    <p class="cal-help">Stand where the picture lines up, match it to the scene, then save. Your GPS spot, compass bearing and the picture's angular width are recorded for this view.</p>
-    <label class="rng">Camera field of view <output id="fovOut"></output><input type="range" id="camFov" min="40" max="110" step="1"></label>
-    <label class="chk"><input type="checkbox" id="track"> Slide the picture with the compass</label>
-    <div class="crop"><span>Trim frame edges</span>
-      <div id="cropRow"><label>L<input type="range" min="0" max="25" step="0.5"></label><label>T<input type="range" min="0" max="25" step="0.5"></label><label>R<input type="range" min="0" max="25" step="0.5"></label><label>B<input type="range" min="0" max="25" step="0.5"></label></div>
-    </div>
-    <div class="dr-btns"><button id="calSave" class="pill">Save this alignment</button><button id="calReset" class="pill ghost">Reset</button></div>
-    <button id="calExport" class="pill ghost wide">Export all calibrations (.json)</button>
-  </div>
-  <div id="arMsg" class="ar-ui" hidden></div>
-  <div id="arFlash" hidden></div>
-</section>
-
-<!-- high-res viewer -->
-<section id="viewer" hidden>
-  <div id="vStage"><img id="vImg" alt="" draggable="false"></div>
-  <div class="v-top"><span id="vCap"></span><button id="vClose" class="ar-btn" aria-label="Close">✕</button></div>
-  <div class="v-bot"><span id="vInfo"></span><a id="vDownload" target="_blank" rel="noopener"></a></div>
-</section>
-
-<dialog id="help">
-  <h2>How Vantage works</h2>
-  <p>Each pin marks where an artist or photographer stood. The shaded cone shows which way they looked and roughly how wide their picture spans.</p>
-  <ol>
-    <li><b>Walk there.</b> Open a pin, tap <i>Walk there</i>, or just follow the distance readout.</li>
-    <li><b>Ghost view.</b> The camera opens with the picture floating over it. Turn until the guide says you're facing the view. Fade or swipe between then and now.</li>
-    <li><b>Photo match.</b> Take a photo, then line the picture up on it. This works on any connection and lets you fine-tune slowly.</li>
-    <li><b>Save.</b> The round button saves a then-and-now image.</li>
-  </ol>
-  <h3>How sure is each pin?</h3>
-  <p><i class="cdot conf-documented"></i> <b>Documented</b>: from a published viewpoint map or catalogue note, mostly the Cape Ann Museum's <a href="https://www.fitzhenrylaneonline.org/" target="_blank" rel="noopener">Fitz Henry Lane Online</a>.<br>
-     <i class="cdot conf-inferred"></i> <b>Inferred</b>: worked out from the title and the lie of the land.<br>
-     <i class="cdot conf-general"></i> <b>General</b>: the right area, but the exact spot is unknown.</p>
-  <h3>Field calibration</h3>
-  <p>When a picture lines up, tap ◎ in the ghost view and <i>Save this alignment</i>. That records your GPS position, the bearing and the picture's angular width on this phone. Export the file and drop it into <code>data/calibrations.json</code> on the server so every device gets the corrected pins.</p>
-  <p><button class="pill ghost" id="helpExport">Export my calibrations</button></p>
-  <h3>Camera, GPS and compass</h3>
-  <p>Browsers only allow these on HTTPS pages. On the plain-HTTP homelab address, use <i>Photo match</i>, or open the Tailscale HTTPS address described in the README. Long-press the map to simulate standing somewhere.</p>
-  <p class="small">Images come from Wikimedia Commons, all public domain. Pictures painted from a boat are marked; on private ground you can usually see the same scene from the road. Please respect property.</p>
-  <p class="small"><a href="about.html">About Vantage</a> · free, public-domain art, CC BY data.</p>
-  <button class="pill" id="helpClose">Close</button>
-</dialog>
-
-<input type="file" id="fileCapture" accept="image/*" capture="environment" hidden>
-<input type="file" id="fileChoose" accept="image/*" hidden>
-<script>
-  // Opened straight from disk: browsers block module scripts and fetch() on file:// pages.
-  if (location.protocol === "file:") {
-    document.getElementById("sheetBody").innerHTML =
-      '<p class="loading">This page has to come from a web server — browsers block its scripts and data when it’s opened as a file.<br><br>' +
-      'Open <a href="http://192.168.50.88:8888/vantage/">http://192.168.50.88:8888/vantage/</a> instead.</p>';
+<style>
+  :root {
+    --paper: #f3eee3; --paper-2: #e9e1cf; --paper-3: #ddd2ba;
+    --ink: #1d2529; --ink-2: #4b5559; --ink-3: #7b8285; --rule: #cbbd9c;
+    --amber: #c8782a; --teal: #2f5d62;
+    --display: "IM Fell English", "Iowan Old Style", Georgia, serif;
+    --body: "Spectral", "Iowan Old Style", Georgia, serif;
+    color-scheme: light;
   }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #1c2022; --paper-2: #252a2c; --paper-3: #30373a; --ink: #ece5d6; --ink-2: #c3bcad; --ink-3: #8f9294; --rule: #4a4538; --teal: #8cc3c8; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.55 var(--body); -webkit-text-size-adjust: 100%; }
+  a { color: var(--teal); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0 0; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font: 26px/1 var(--display); }
+  .brand img { width: 34px; height: 34px; }
+  .top nav a { margin-left: 18px; font-size: 15px; color: var(--ink-2); text-decoration: none; }
+  .top nav a:hover { color: var(--ink); text-decoration: underline; }
+
+  .hero { padding: 48px 0 28px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+  .eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin: 0 0 10px; }
+  h1 { font: 400 clamp(40px, 6vw, 64px)/1.02 var(--display); margin: 0 0 18px; letter-spacing: -.01em; }
+  h1 i { color: var(--amber); }
+  .lede { font-size: 19px; color: var(--ink-2); margin: 0 0 26px; max-width: 34em; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font: 600 16px/1 var(--body); text-decoration: none; border: 1.5px solid var(--ink); }
+  .btn.primary { background: var(--ink); color: var(--paper); }
+  .btn.primary:hover { background: var(--teal); border-color: var(--teal); }
+  .btn.ghost { color: var(--ink); }
+  .btn.ghost:hover { background: var(--paper-2); }
+  .free { font-size: 14px; color: var(--ink-3); }
+
+  /* then/now card */
+  .plate { position: relative; aspect-ratio: 26.25 / 24; border-radius: 6px; overflow: hidden; background: var(--paper-3); box-shadow: 0 18px 40px -18px rgba(29,37,41,.55), 0 2px 6px rgba(29,37,41,.12); border: 1px solid var(--rule); }
+  .plate img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .plate .reticle { position: absolute; inset: 14px; border: 1.5px solid rgba(243,238,227,.75); border-radius: 4px; pointer-events: none; }
+  .plate .reticle::before, .plate .reticle::after { content: ""; position: absolute; left: 50%; top: 50%; background: rgba(243,238,227,.8); transform: translate(-50%,-50%); }
+  .plate .reticle::before { width: 26px; height: 1.5px; } .plate .reticle::after { width: 1.5px; height: 26px; }
+  .plate figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 14px 10px; font-size: 13px; color: #f3eee3; background: linear-gradient(transparent, rgba(0,0,0,.6)); }
+
+  .rule { border: 0; border-top: 1px solid var(--rule); margin: 36px 0; }
+  h2 { font: 400 32px/1.1 var(--display); margin: 0 0 18px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: s; }
+  .step { padding: 20px; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 6px; }
+  .step h3 { font: 400 22px/1.15 var(--display); margin: 0 0 8px; }
+  .step h3::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 10px; border-radius: 50%; background: var(--amber); color: #fff; font: 600 15px/1 var(--body); vertical-align: 3px; }
+  .step p { margin: 0; color: var(--ink-2); font-size: 16px; }
+
+  .strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 22px 0 8px; }
+  .strip a { aspect-ratio: 1; overflow: hidden; border-radius: 4px; background: var(--paper-3); border: 1px solid var(--rule); }
+  .strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .strip a:hover img { transform: scale(1.06); }
+  .stats { display: flex; flex-wrap: wrap; gap: 28px; margin: 18px 0 0; }
+  .stats div { font-size: 14px; color: var(--ink-3); }
+  .stats b { display: block; font: 400 36px/1 var(--display); color: var(--ink); }
+  .artists { color: var(--ink-2); font-size: 16px; margin-top: 14px; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .card { padding: 22px; border: 1px solid var(--rule); border-radius: 6px; }
+  .card h3 { font: 400 24px/1.15 var(--display); margin: 0 0 10px; }
+  .card p, .card li { color: var(--ink-2); font-size: 16px; }
+  .card ul { padding-left: 18px; margin: 8px 0 0; }
+  .cc { display: inline-flex; gap: 6px; align-items: center; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 4px; font-size: 13px; color: var(--ink-2); text-decoration: none; }
+  .coffee { background: var(--paper-2); }
+  .btn.coffee-btn { background: #c8782a; border-color: #c8782a; color: #fff; }
+  .btn.coffee-btn:hover { background: #a9621f; border-color: #a9621f; }
+
+  footer { padding: 34px 0 48px; font-size: 14px; color: var(--ink-3); }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding-top: 28px; gap: 26px; }
+    .steps, .cols { grid-template-columns: 1fr; }
+    .strip { grid-template-columns: repeat(3, 1fr); }
+    .top nav a:not(.keep) { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="icon.svg" alt=""> Vantage</a>
+    <nav><a href="#how">How it works</a><a href="#free">Free &amp; open</a><a class="keep" href="map.html">Open the map →</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Cape Ann · Portland, Maine · work in progress</p>
+      <h1>Stand where <i>they</i> stood.</h1>
+      <p class="lede">Fitz Henry Lane, Winslow Homer, Childe Hassam, Edward Hopper and the old postcard photographers all set up on these shores. Vantage pins their pictures to the spot, then lets you hold your phone up and see the painting laid over the real view.</p>
+      <div class="cta">
+        <a class="btn primary" href="map.html">Open the map</a>
+        <a class="btn ghost" href="#support">☕ Buy me a coffee</a>
+      </div>
+      <p class="free">Free. No ads, no account, nothing to install.</p>
+    </div>
+    <figure class="plate" id="plate">
+      <img id="plateThen" alt="">
+      <span class="reticle"></span>
+      <figcaption id="plateCap"></figcaption>
+    </figure>
+  </section>
+
+  <hr class="rule" id="how">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><h3>Pick a picture</h3><p>Every pin marks where an artist or photographer stood. The shaded cone shows which way they looked.</p></div>
+    <div class="step"><h3>Walk there</h3><p>Follow the distance readout to the spot. Pins are marked documented, inferred or general, so you know how sure we are.</p></div>
+    <div class="step"><h3>Ghost it</h3><p>Open the camera and the painting floats over the scene. Fade or swipe between then and now, and save the pair.</p></div>
+  </div>
+
+  <div class="strip" id="strip"></div>
+  <div class="stats" id="stats"></div>
+  <p class="artists" id="artists"></p>
+
+  <hr class="rule" id="free">
+  <div class="cols">
+    <div class="card">
+      <h3>Free, and staying free</h3>
+      <p>Vantage is a personal project. There's nothing to buy and no account, and it doesn't track you. Your position stays on your phone.</p>
+      <ul>
+        <li><b>The pictures</b> are public domain, from The Met, the National Gallery, Cleveland, the Library of Congress, NYPL and Wikimedia Commons. Credits are on every pin.</li>
+        <li><b>Vantage's own work</b> (pin locations, notes, calibrations and text) is shared under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener" target="_blank">Creative Commons Attribution 4.0</a>. Reuse it, remix it, just say where it came from.</li>
+      </ul>
+      <p><a class="cc" href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener" target="_blank">CC BY 4.0</a></p>
+    </div>
+    <div class="card coffee" id="support">
+      <h3>Buy me a coffee</h3>
+      <p>Hunting down where Lane set his easel in 1862 takes old maps, catalogue notes and a lot of walking. If Vantage made a walk better, a coffee keeps it going: more towns, more pictures, better pins.</p>
+      <p><!-- COFFEE LINK: replace YOUR-NAME (or paste a Ko-fi / Venmo link) -->
+        <a class="btn coffee-btn" id="coffee" href="https://buymeacoffee.com/YOUR-NAME" target="_blank" rel="noopener">☕ Buy me a coffee</a></p>
+      <p style="font-size:14px;color:var(--ink-3)">Spotted a pin in the wrong place, or know where a picture was painted? That helps just as much. Line it up in the ghost view and export the calibration.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Vantage · a work in progress, being field-tested on Cape Ann. Pins are best guesses until someone stands there.</p>
+    <p>Map © OpenStreetMap contributors. Viewpoint research draws on the Cape Ann Museum's <a href="https://www.fitzhenrylaneonline.org/" target="_blank" rel="noopener">Fitz Henry Lane Online</a>. Please respect private property: most views can be seen from the road.</p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  // hero + strip come from the live catalogue, so the page stays current as pins are added
+  const SHOW = ["lane-calm-sea-1860", "hopper-prospect-street-1928", "sloan-main-street-1917", "hassam-gloucester-harbor-1899", "photo-annisquam-light-1904", "hopper-lighthouse-two-lights-1929", "lane-coffins-beach-1862", "kroll-good-harbor-1912", "homer-gloucester-harbor-1873"];
+  let data;
+  try { data = await (await fetch("data/artworks.json", { cache: "no-cache" })).json(); } catch { return; }
+  let local = {};
+  try { const j = await (await fetch("data/local.json", { cache: "no-cache" })).json(); local = (j && j.items) || {}; } catch {}
+  const items = data.items, byId = Object.fromEntries(items.map(i => [i.id, i]));
+  const src = (it, size) => (local[it.id] && local[it.id][size]) || it.image[size] || it.image.web;
+  const name = it => (data.artists[it.artist] || {}).name || "";
+
+  // hero: swap for a real then-and-now capture after the field test
+  const hero = byId["lane-calm-sea-1860"] || byId["lane-stage-fort-1862"] || items[0];
+  const setHero = it => {
+    const img = document.getElementById("plateThen");
+    img.src = src(it, "web");
+    document.getElementById("plateCap").textContent = `${it.title} — ${name(it)}, ${it.date} · ${it.collection}`;
+    return img;
+  };
+  // falls back to Stage Fort if the featured image hasn't been saved to art/feature/ yet
+  setHero(hero).onerror = function () { this.onerror = null; if (byId["lane-stage-fort-1862"]) setHero(byId["lane-stage-fort-1862"]); };
+
+  const strip = document.getElementById("strip");
+  SHOW.slice(1).concat(items.map(i => i.id)).filter((v, i, a) => byId[v] && a.indexOf(v) === i).slice(0, 6).forEach(id => {
+    const it = byId[id], a = document.createElement("a");
+    a.href = `map.html?item=${encodeURIComponent(id)}`; a.title = `${it.title} — ${name(it)}`;
+    a.setAttribute("aria-label", a.title);
+    a.innerHTML = `<img loading="lazy" alt="">`; a.firstChild.src = src(it, "thumb");
+    strip.appendChild(a);
+  });
+
+  const regions = new Set(items.map(i => i.region || "cape_ann"));
+  const photos = items.filter(i => i.kind === "photograph").length;
+  document.getElementById("stats").innerHTML =
+    `<div><b>${items.length}</b>pictures pinned</div><div><b>${items.length - photos}</b>paintings &amp; prints</div><div><b>${photos}</b>historic photos</div><div><b>${regions.size}</b>regions</div>`;
+  const counts = {};
+  items.forEach(i => { if (i.artist !== "birdseye") counts[i.artist] = (counts[i.artist] || 0) + 1; });
+  const names = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([k]) => (data.artists[k] || {}).name).filter(Boolean);
+  document.getElementById("artists").textContent = names.join(" · ");
+})();
 </script>
-<script src="lib/leaflet/leaflet.js"></script>
-<script type="module" src="js/app.js"></script>
 </body>
 </html>
