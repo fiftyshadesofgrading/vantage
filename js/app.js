@@ -11,6 +11,7 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": 
 const params = new URLSearchParams(location.search);
 
 let DATA, ITEMS = [], LOCAL = {}, SERVER_CALS = {}, GROUPS = [];
+let REGIONS = {}, REGION = null;
 let map, markerLayer, coneLayer, meMarker, meCircle;
 let filter = "all";
 let selected = null;
@@ -25,9 +26,12 @@ async function boot() {
     fetch("data/calibrations.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : {})).catch(() => ({})),
   ]);
   DATA = data;
+  REGIONS = data.regions || { cape_ann: { label: "Cape Ann", declination: -14.4, ...data.region } };
   LOCAL = local.items || {};
   SERVER_CALS = cals.calibrations || {};
   ITEMS = data.items.map(it => ({ ...it, _remote: { ...it.image }, _orig: { ...it.vantage } }));
+  const wantItem = ITEMS.find(i => i.id === params.get("item"));
+  setRegion([wantItem?.region, params.get("region"), prefs.region].find(k => k && REGIONS[k]) || Object.keys(REGIONS)[0]);
   applyCalibrations();
   buildGroups();
 
@@ -82,10 +86,32 @@ function imageUrl(it, size) {
   return it.image[size] || it.image.web;
 }
 const visible = it => filter === "all" || it.artist === filter;
+/** list membership: the current region (items from regions without their own entry show under the first one) */
+const inRegion = it => (REGIONS[it.region] ? it.region : Object.keys(REGIONS)[0]) === REGION;
+
+/** switch the map/list region; also sets the compass declination for that area */
+function setRegion(key, { fly = false } = {}) {
+  if (!REGIONS[key]) return;
+  REGION = key;
+  const r = REGIONS[key];
+  if (r.declination != null) prefs.declination = r.declination;
+  prefs.region = key; savePrefs();
+  const btn = $("#btnRegion");
+  if (btn) btn.innerHTML = `${esc(r.label)}<span class="caret" aria-hidden="true">▾</span>`;
+  document.title = `Vantage · ${r.label}`;
+  if (fly && map) map.flyTo(r.center, r.zoom, { duration: 1.2 });
+}
+function nextRegion() {
+  const keys = Object.keys(REGIONS);
+  setRegion(keys[(keys.indexOf(REGION) + 1) % keys.length], { fly: true });
+  filter = "all";
+  renderList();
+  toast(`${REGIONS[REGION].label}: ${ITEMS.filter(inRegion).length} pictures`, 2200);
+}
 
 /* ── map ──────────────────────────────────────────────────────── */
 function initMap() {
-  map = L.map("map", { zoomControl: false, attributionControl: true, tap: false }).setView(DATA.region.center, DATA.region.zoom);
+  map = L.map("map", { zoomControl: false, attributionControl: true, tap: false }).setView(REGIONS[REGION].center, REGIONS[REGION].zoom);
   L.control.zoom({ position: "topright" }).addTo(map);
   const osm = () => L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -144,6 +170,8 @@ function onFix(fix) {
     updateMe();
     if (firstFix && !params.get("item")) {
       firstFix = false;
+      const home = Object.entries(REGIONS).find(([, r]) => dist(fix, { lat: r.center[0], lon: r.center[1] }) < 30000);
+      if (home && home[0] !== REGION) { setRegion(home[0]); filter = "all"; }
       const near = ITEMS.some(it => dist(fix, it.vantage) < 6000);
       if (near) map.setView([fix.lat, fix.lon], Math.max(map.getZoom(), 16));
     }
@@ -175,7 +203,7 @@ function proximity(fix) {
       announced.add(key);
       const it = g.items[0];
       if (navigator.userActivation?.hasBeenActive) navigator.vibrate?.([60, 40, 60]);
-      toast(`You're at ${esc(artist(it).name.split(" ").pop())}'s spot: <b>${esc(it.title)}</b>${g.items.length > 1 ? ` (+${g.items.length - 1} more)` : ""}
+      toast(`You're at ${({ detroit: "the photographer", stereo: "the photographer", birdseye: "the artist" })[it.artist] || esc(artist(it).name.split(" ").pop())}'s spot: <b>${esc(it.title)}</b>${g.items.length > 1 ? ` (+${g.items.length - 1} more)` : ""}
         <button class="pill" data-open="${esc(it.id)}">Open ghost view</button>`, 9000);
       return;
     }
@@ -194,11 +222,12 @@ function focusOn(v, zoom) {
 /* ── sheet: list ──────────────────────────────────────────────── */
 function chips() {
   const counts = {};
-  ITEMS.forEach(i => (counts[i.artist] = (counts[i.artist] || 0) + 1));
+  const here = ITEMS.filter(inRegion);
+  here.forEach(i => (counts[i.artist] = (counts[i.artist] || 0) + 1));
   const keys = Object.keys(DATA.artists).filter(k => counts[k]);
-  const label = k => ({ detroit: "Photographs", birdseye: "Bird's-eye" }[k] || DATA.artists[k].name.split(" ").pop());
+  const label = k => ({ detroit: "Detroit Publishing", birdseye: "Bird's-eye", stereo: "Stereoviews", soule: "Great Fire 1866" }[k] || DATA.artists[k].name.split(" ").pop());
   return `<div class="chips" role="tablist">
-    <button class="chip${filter === "all" ? " on" : ""}" data-filter="all">All <small>${ITEMS.length}</small></button>
+    <button class="chip${filter === "all" ? " on" : ""}" data-filter="all">All <small>${here.length}</small></button>
     ${keys.map(k => `<button class="chip${filter === k ? " on" : ""}" data-filter="${k}" style="--c:${DATA.artists[k].color}">${esc(label(k))} <small>${counts[k]}</small></button>`).join("")}
   </div>`;
 }
@@ -206,26 +235,27 @@ function chips() {
 function renderList() {
   selected = null;
   const fix = S.state.fix;
-  let rows = ITEMS.filter(visible).map(it => ({ it, d: fix ? dist(fix, it.vantage) : null }));
+  let rows = ITEMS.filter(it => visible(it) && inRegion(it)).map(it => ({ it, d: fix ? dist(fix, it.vantage) : null }));
   if (fix) rows.sort((a, b) => a.d - b.d);
   const intro = fix
     ? `<p class="lede">Nearest first. Walk to a pin, face the way its cone points, and open the ghost view.</p>`
     : `<p class="lede">Painters and photographers who stood here. Each pin is where the easel or camera was; the cone is what they saw.</p>`;
   $("#sheetBody").innerHTML = `
-    <div class="sheet-head"><h1>Cape Ann, as they saw it</h1>${intro}${chips()}</div>
+    <div class="sheet-head"><h1>${esc(REGIONS[REGION].label)}, as they saw it</h1>${intro}${chips()}</div>
     <ol class="list">${rows.map(({ it, d }) => `
       <li><button class="row" data-id="${esc(it.id)}">
         <img src="${esc(imageUrl(it, "thumb"))}" data-remote="${esc(it._remote.thumb)}" alt="" loading="lazy" onerror="vantageImgRetry(this)">
         <span class="txt"><b>${esc(it.title)}</b><span class="by" style="--c:${artist(it).color}">${esc(artist(it).name)} · ${esc(it.date)}</span></span>
         <span class="side">${d != null ? `<em>${fmtDist(d)}</em>` : ""}<i class="cdot conf-${it.vantage.confidence}" title="${it.vantage.confidence} vantage"></i></span>
       </button></li>`).join("")}</ol>
-    <p class="foot">Images: Wikimedia Commons (public domain). Vantage points: see each entry for its basis. <button class="linkish" id="openHelp2">How this works</button></p>`;
+    <p class="foot">Images: Wikimedia Commons (public domain). <button class="linkish" id="switchRegion2">Switch to ${esc(REGIONS[Object.keys(REGIONS)[(Object.keys(REGIONS).indexOf(REGION) + 1) % Object.keys(REGIONS).length]].label)}</button> Vantage points: see each entry for its basis. <button class="linkish" id="openHelp2">How this works</button></p>`;
   drawMap();
 }
 
 /* ── sheet: detail ────────────────────────────────────────────── */
 function select(it, { fly = true } = {}) {
   selected = it;
+  if (REGIONS[it.region] && it.region !== REGION) setRegion(it.region);
   renderDetail(it);
   setSheet(matchMedia("(min-width: 900px)").matches ? "full" : "peek");
   drawMap();
@@ -329,6 +359,7 @@ function bindUI() {
     if (t.closest('[data-act="ghost"]')) { startGhost(selected); return; }
     if (t.closest('[data-act="photo"]')) { pickPhoto(selected, true); return; }
     if (t.closest("#openHelp2")) { $("#help").showModal(); }
+    if (t.closest("#switchRegion2")) { nextRegion(); }
   });
   $("#grab").addEventListener("click", () => {
     const s = $("#sheet").dataset.state;
@@ -342,6 +373,7 @@ function bindUI() {
     if (dy < -40) setSheet(s === "mini" ? "peek" : "full");
     if (dy > 40) setSheet(s === "full" ? "peek" : "mini");
   });
+  $("#btnRegion")?.addEventListener("click", nextRegion);
   $("#btnLocate").addEventListener("click", async () => {
     if (!window.isSecureContext && !S.state.simulated) { showBanner(true); return; }
     S.startGeo(); S.startCompass();

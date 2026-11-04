@@ -1,13 +1,35 @@
 {
- "name": "Vantage — Cape Ann",
+ "name": "Vantage — Cape Ann & Portland",
  "version": 1,
- "updated": "2026-11-02",
+ "updated": "2026-11-04",
  "region": {
+  "label": "Cape Ann",
   "center": [
    42.6085,
    -70.664
   ],
-  "zoom": 15
+  "zoom": 15,
+  "declination": -14.4
+ },
+ "regions": {
+  "cape_ann": {
+   "label": "Cape Ann",
+   "center": [
+    42.6085,
+    -70.664
+   ],
+   "zoom": 15,
+   "declination": -14.4
+  },
+  "portland": {
+   "label": "Portland",
+   "center": [
+    43.6585,
+    -70.259
+   ],
+   "zoom": 15,
+   "declination": -15.3
+  }
  },
  "artists": {
   "lane": {
@@ -69,6 +91,16 @@
    "name": "Harrison Bird Brown",
    "life": "1831–1915",
    "color": "#5a6fa8"
+  },
+  "soule": {
+   "name": "John P. Soule",
+   "life": "stereographs of the Great Fire, July 1866",
+   "color": "#9a4a2a"
+  },
+  "stereo": {
+   "name": "Portland stereoviews",
+   "life": "various photographers, 1860s–1880s",
+   "color": "#7a6a4f"
   }
  },
  "items": [
@@ -3870,6 +3902,2738 @@
     }
    ],
    "region": "cape_ann"
+  },
+  {
+   "id": "pdx-harbor-entrance-observatory",
+   "artist": "stereo",
+   "title": "Entrance to Portland Harbor, from the Observatory",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 135,
+    "fov": 50,
+    "range": 3000,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title: 'looking s.-e. from observatory on Munjoy Hill'",
+    "note": "At the foot of the Portland Observatory (the deck is open in season), look south-east past the rooftops of Munjoy Hill to House Island, Fort Gorges and the harbor mouth."
+   },
+   "image": {
+    "commons": "Entrance to Portland Harbor, Maine. Looking s.-e. from observatory on Munjoy Hill (NYPL b11707231-G89F234 079ZF).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff",
+    "width": 3072,
+    "height": 1956,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff/lossy-page1-1920px-Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff/lossy-page1-500px-Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff/lossy-page1-1920px-Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.24,
+     0.51,
+     0.08
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Munjoy Hill rooftops, then open water out to the forts. The harbor islands have barely moved; the roofline is the test.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20079ZF"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-harbor-from-observatory",
+   "artist": "stereo",
+   "title": "Portland Harbor, from the Observatory",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 205,
+    "fov": 50,
+    "range": 2500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title: taken from the Portland Observatory",
+    "note": "From the Observatory, look south-south-west over the roofs toward the harbor and South Portland."
+   },
+   "image": {
+    "commons": "Portland Harbor, from Observatory (2) (NYPL b11707231-G89F234 030F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff",
+    "width": 3072,
+    "height": 1747,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff/lossy-page1-1920px-Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff/lossy-page1-500px-Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff/lossy-page1-1920px-Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/26/Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.14,
+     0.38,
+     0.52,
+     0.08
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Clapboard houses packed down the slope of Munjoy Hill to the water.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20030F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Portland_Harbor%2C_from_Observatory_%282%29_%28NYPL_b11707231-G89F234_030F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-harbor-south-munjoy",
+   "artist": "stereo",
+   "title": "Portland Harbor, looking south from Munjoy's Hill",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66474,
+    "lon": -70.24833,
+    "heading": 185,
+    "fov": 50,
+    "range": 2500,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Title only; elevated view, probably from the Observatory or a roof beside it",
+    "note": "Somewhere near the top of Munjoy Hill by the Observatory, looking south over the harbor."
+   },
+   "image": {
+    "commons": "Portland Harbor, Maine, looking south from Munjoy's Hill (NYPL b11707231-G89F234 080ZF).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff",
+    "width": 3072,
+    "height": 1945,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff/lossy-page1-1920px-Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff/lossy-page1-500px-Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff/lossy-page1-1920px-Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.112,
+     0.23,
+     0.517,
+     0.082
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "New brick and wood houses on Munjoy Hill, rebuilt after 1866, with the harbor and its anchored ships beyond.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20080ZF"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Portland_Harbor%2C_Maine%2C_looking_south_from_Munjoy%27s_Hill_%28NYPL_b11707231-G89F234_080ZF%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-from-observatory-1881",
+   "artist": "stereo",
+   "title": "Portland, from the Observatory, Sept. 9, 1881",
+   "date": "1881",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 235,
+    "fov": 50,
+    "range": 1500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title; heading assumed down Congress Street toward downtown",
+    "note": "From the Observatory, look down Congress Street toward downtown (south-west)."
+   },
+   "image": {
+    "commons": "Portland, Me., from the Observatory, Sept. 9, 1881 (NYPL b11707231-G89F234 059ZF).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff",
+    "width": 3072,
+    "height": 2054,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff/lossy-page1-1920px-Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff/lossy-page1-500px-Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff/lossy-page1-1920px-Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/84/Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.12,
+     0.35,
+     0.5,
+     0.09
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "A dated view: 9 September 1881. Downtown was rebuilt by then, its new church towers rising above the roofs.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20059ZF"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Portland%2C_Me.%2C_from_the_Observatory%2C_Sept._9%2C_1881_%28NYPL_b11707231-G89F234_059ZF%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-observatory-westerly",
+   "artist": "soule",
+   "title": "Panoramic view from the Observatory, looking westerly",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 285,
+    "fov": 55,
+    "range": 1500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; title gives the direction",
+    "note": "From the Observatory, look west across Munjoy Hill toward Back Cove."
+   },
+   "image": {
+    "commons": "Panoramic view from Observatory, looking westerly, showing Burnt disctrict on Munjoy's Hill (NYPL b11707232-G89F237 025F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff",
+    "width": 3072,
+    "height": 1658,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff/lossy-page1-1920px-Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff/lossy-page1-500px-Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff/lossy-page1-1920px-Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/80/Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.135,
+     0.286,
+     0.531,
+     0.093
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "The burnt district reached up onto Munjoy Hill. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20025F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Observatory%2C_looking_westerly%2C_showing_Burnt_disctrict_on_Munjoy%27s_Hill_%28NYPL_b11707232-G89F237_025F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-observatory-southwest",
+   "artist": "soule",
+   "title": "Burnt district from the Observatory, looking south-west",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 222,
+    "fov": 55,
+    "range": 1500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; title gives the direction",
+    "note": "From the Observatory, look south-west toward downtown."
+   },
+   "image": {
+    "commons": "Panoramic view of Burnt district from the Observatory, looking south-west (NYPL b11707232-G89F237 023F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff",
+    "width": 3072,
+    "height": 1722,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff/lossy-page1-1920px-Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff/lossy-page1-500px-Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff/lossy-page1-1920px-Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.127,
+     0.245,
+     0.533,
+     0.13
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Rows of army tents pitched for the homeless, with the burnt-out city beyond. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20023F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Burnt_district_from_the_Observatory%2C_looking_south-west_%28NYPL_b11707232-G89F237_023F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-observatory-congress",
+   "artist": "soule",
+   "title": "Burnt district, looking down Congress Street from the Observatory",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 228,
+    "fov": 50,
+    "range": 1500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; Congress St runs ~228° from the Observatory",
+    "note": "From the Observatory, line up on Congress Street running away down the hill."
+   },
+   "image": {
+    "commons": "Panoramic view of Burnt district, looking down Congress Street, from Observatory (NYPL b11707232-G89F237 024F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff",
+    "width": 3072,
+    "height": 1675,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff/lossy-page1-1920px-Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff/lossy-page1-500px-Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff/lossy-page1-1920px-Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/5/57/Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.129,
+     0.275,
+     0.531,
+     0.115
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Congress Street running through a tent city toward the ruins of downtown. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20024F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Burnt_district%2C_looking_down_Congress_Street%2C_from_Observatory_%28NYPL_b11707232-G89F237_024F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-tents-munjoy",
+   "artist": "soule",
+   "title": "Tents on Munjoy's Hill, from the Observatory",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66528,
+    "lon": -70.24833,
+    "heading": 200,
+    "fov": 55,
+    "range": 1500,
+    "confidence": "general",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; heading estimated from the harbor in the background",
+    "note": "From the Observatory, look south toward the harbor over the slope of the hill."
+   },
+   "image": {
+    "commons": "Tents on Munjoy's Hill, from the Observatory (NYPL b11707232-G89F237 022F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff",
+    "width": 3072,
+    "height": 1677,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff/lossy-page1-1920px-Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff/lossy-page1-500px-Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff/lossy-page1-1920px-Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.121,
+     0.248,
+     0.538,
+     0.107
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "The relief camp on Munjoy Hill, where many of the 10,000 people burned out of their homes spent the summer of 1866.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20022F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Tents_on_Munjoy%27s_Hill%2C_from_the_Observatory_%28NYPL_b11707232-G89F237_022F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-fort-allen-park",
+   "artist": "detroit",
+   "title": "Fort Allen Park",
+   "date": "c. 1905",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.66552,
+    "lon": -70.24079,
+    "heading": 145,
+    "fov": 50,
+    "range": 2500,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject: Fort Allen Park on the Eastern Promenade; spot inside the park not known",
+    "note": "Fort Allen Park on the Eastern Prom, looking out toward the harbor and Fort Gorges. Try the path near the flagpole."
+   },
+   "image": {
+    "commons": "Fort Allen Park, Portland, Me (NYPL b12647398-67685).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff",
+    "width": 2448,
+    "height": 1661,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff/lossy-page1-1920px-Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff/lossy-page1-500px-Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff/lossy-page1-1920px-Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.07,
+     0.1,
+     0.07,
+     0.22
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Lamp posts, a flagpole and a lawn above Casco Bay, with steamers in the harbor. The park sits on the earthworks of an 1814 fort.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67685"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Fort_Allen_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67685%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-grand-trunk-station",
+   "artist": "detroit",
+   "title": "Grand Trunk Station",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Glass negative",
+   "collection": "Library of Congress, Detroit Publishing Co. collection",
+   "vantage": {
+    "lat": 43.65906,
+    "lon": -70.24906,
+    "heading": 45,
+    "fov": 55,
+    "range": 200,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject: the Grand Trunk depot at the foot of India Street (demolished 1966; clock tower removed 1948)",
+    "note": "Foot of India Street by Fore Street, looking north-east at where the station stood. The surviving Grand Trunk office building at India and Thames is your landmark."
+   },
+   "image": {
+    "commons": "Detroit Publishing - Grand Trunk Station, Portland, Me..jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg",
+    "width": 9427,
+    "height": 7513,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg/1920px-Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg/500px-Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg/3840px-Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/11/Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg",
+    "photo": "museum",
+    "crop": null
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Portland was the Grand Trunk Railway's winter port for Montreal. The station is gone; the office building beside it survives.",
+   "links": [
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Grand_Trunk_Station%2C_Portland%2C_Me..jpg"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-india-from-middle",
+   "artist": "soule",
+   "title": "India Street from Middle Street, looking west",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6602,
+    "lon": -70.2492,
+    "heading": 315,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; India St runs north-west from Middle",
+    "note": "India Street at Middle Street, looking up India toward Congress."
+   },
+   "image": {
+    "commons": "India from Middle Street, looking west (NYPL b11707232-G89F237 028F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff",
+    "width": 3072,
+    "height": 1674,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff/lossy-page1-1920px-India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff/lossy-page1-500px-India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff/lossy-page1-1920px-India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b9/India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.138,
+     0.252,
+     0.531,
+     0.095
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Bare elms and swept-clean lots where the fire started, near the foot of Munjoy Hill. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20028F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:India_from_Middle_Street%2C_looking_west_%28NYPL_b11707232-G89F237_028F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-middle-street-west",
+   "artist": "stereo",
+   "title": "Middle Street, looking west",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.65969,
+    "lon": -70.2499,
+    "heading": 225,
+    "fov": 50,
+    "range": 400,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Title only; the elms suggest the upper (eastern) end of Middle Street",
+    "note": "Upper Middle Street near India, looking west toward the Old Port."
+   },
+   "image": {
+    "commons": "Middle Street, looking west, Portland, Maine (NYPL b11707231-G89F234 010F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff",
+    "width": 3072,
+    "height": 1725,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff/lossy-page1-1920px-Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff/lossy-page1-500px-Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff/lossy-page1-1920px-Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/88/Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.28,
+     0.54,
+     0.08
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "An elm tunnel over Middle Street — the trees that gave Portland the name Forest City.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20010F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Middle_Street%2C_looking_west%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_010F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-longfellow-birthplace",
+   "artist": "detroit",
+   "title": "Longfellow's Birthplace",
+   "date": "1902",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.66042,
+    "lon": -70.24693,
+    "heading": 40,
+    "fov": 50,
+    "range": 120,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject: Longfellow's birthplace at Fore and Hancock Streets (demolished 1955); spot approximate",
+    "note": "Fore Street near Hancock Street, where the house stood until 1955."
+   },
+   "image": {
+    "commons": "Longfellow's Birthplace, Portland, Me (NYPL b12647398-62882).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff",
+    "width": 2331,
+    "height": 1470,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff/lossy-page1-1920px-Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff/lossy-page1-500px-Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff/lossy-page1-1920px-Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/41/Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.065,
+     0.1,
+     0.28,
+     0.19
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The house where Henry Wadsworth Longfellow was born in 1807. It was torn down in 1955.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-62882"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Longfellow%27s_Birthplace%2C_Portland%2C_Me_%28NYPL_b12647398-62882%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-city-hall-from-custom-house",
+   "artist": "soule",
+   "title": "City Hall, from the U.S. Custom House",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 318,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; the federal building stood where Post Office Park is now",
+    "note": "Post Office Park (Exchange and Middle), looking up Exchange Street to City Hall."
+   },
+   "image": {
+    "commons": "City Hall, from U.S. Custom House (NYPL b11707232-G89F237 012F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff",
+    "width": 2737,
+    "height": 1388,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff/lossy-page1-1920px-City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff/lossy-page1-500px-City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff/lossy-page1-1920px-City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/48/City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.088,
+     0.066,
+     0.508,
+     0.115
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "City Hall's burnt shell at the top of Exchange Street. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20012F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:City_Hall%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_012F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-down-exchange",
+   "artist": "soule",
+   "title": "Looking down Exchange Street, from the U.S. Custom House",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 140,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Post Office Park, looking down Exchange Street toward Fore Street and the harbor."
+   },
+   "image": {
+    "commons": "Looking down Exchange Street, from U.S. Custom House (NYPL b11707232-G89F237 011F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff",
+    "width": 2737,
+    "height": 1372,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff/lossy-page1-1920px-Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff/lossy-page1-500px-Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff/lossy-page1-1920px-Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.088,
+     0.083,
+     0.51,
+     0.108
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Exchange Street, cleared to the harbor. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20011F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_down_Exchange_Street%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_011F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-ne-st-stephens",
+   "artist": "soule",
+   "title": "Burnt district looking north-east, St. Stephen's Church",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 45,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; title gives the direction",
+    "note": "Post Office Park, looking north-east along Middle Street."
+   },
+   "image": {
+    "commons": "Burnt district, looking north-east from U.S. Custom House, showing St. Stephens Church (NYPL b11707232-G89F237 009F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff",
+    "width": 2737,
+    "height": 1377,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff/lossy-page1-1920px-Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff/lossy-page1-500px-Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff/lossy-page1-1920px-Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.09,
+     0.066,
+     0.504,
+     0.108
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "The gutted shell of St. Stephen's Church above a field of cellar holes. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20009F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Burnt_district%2C_looking_north-east_from_U.S._Custom_House%2C_showing_St._Stephens_Church_%28NYPL_b11707232-G89F237_009F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-sw-custom-house",
+   "artist": "soule",
+   "title": "Burnt district looking south-west",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 225,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; title gives the direction",
+    "note": "Post Office Park, looking south-west along Middle Street."
+   },
+   "image": {
+    "commons": "Burnt district, looking south-west from U.S. Custom House (NYPL b11707232-G89F237 006F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff",
+    "width": 2737,
+    "height": 1354,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff/lossy-page1-1920px-Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff/lossy-page1-500px-Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff/lossy-page1-1920px-Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.096,
+     0.076,
+     0.506,
+     0.089
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "A standing wall frames the ruins of the commercial district. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20006F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Burnt_district%2C_looking_south-west_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_006F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-canal-bank",
+   "artist": "soule",
+   "title": "Canal Bank building and Middle Street",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 235,
+    "fov": 50,
+    "range": 600,
+    "confidence": "general",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; heading estimated",
+    "note": "Post Office Park, looking south-west down Middle Street."
+   },
+   "image": {
+    "commons": "Canal Bank building and portion of Middle St., from U.S. Custom House (NYPL b11707232-G89F237 007F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff",
+    "width": 2737,
+    "height": 1359,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff/lossy-page1-1920px-Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff/lossy-page1-500px-Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff/lossy-page1-1920px-Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.088,
+     0.067,
+     0.51,
+     0.105
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "The Canal Bank's walls still standing among the ruins. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20007F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Canal_Bank_building_and_portion_of_Middle_St.%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_007F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-federal-congress",
+   "artist": "soule",
+   "title": "Looking north across Federal and Congress Streets",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 345,
+    "fov": 55,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; title gives the direction",
+    "note": "Post Office Park, looking north across Federal Street and Congress Street."
+   },
+   "image": {
+    "commons": "Looking northerly, across Federal and Congress Streets, from U.S. Custom House (NYPL b11707232-G89F237 010F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff",
+    "width": 2737,
+    "height": 1364,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff/lossy-page1-1920px-Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff/lossy-page1-500px-Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff/lossy-page1-1920px-Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.088,
+     0.067,
+     0.508,
+     0.105
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Blocks reduced to cellar holes between Federal and Congress Streets. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20010F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_northerly%2C_across_Federal_and_Congress_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_010F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-up-middle-free",
+   "artist": "soule",
+   "title": "Looking up Middle and Free Streets",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6577,
+    "lon": -70.2551,
+    "heading": 228,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Post Office Park, looking south-west up Middle Street toward Free Street."
+   },
+   "image": {
+    "commons": "Looking up Middle and Free Streets, from U.S. Custom House (NYPL b11707232-G89F237 008F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff",
+    "width": 2737,
+    "height": 1375,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff/lossy-page1-1920px-Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff/lossy-page1-500px-Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff/lossy-page1-1920px-Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.075,
+     0.502,
+     0.087
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Middle Street, the city's main business street, burned from end to end. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20008F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_up_Middle_and_Free_Streets%2C_from_U.S._Custom_House_%28NYPL_b11707232-G89F237_008F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-up-exchange-from-fore",
+   "artist": "soule",
+   "title": "Looking up Exchange Street from Fore Street",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6566,
+    "lon": -70.2544,
+    "heading": 318,
+    "fov": 50,
+    "range": 500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Exchange Street at Fore Street, looking up the hill to Post Office Park and City Hall."
+   },
+   "image": {
+    "commons": "Looking up Exchange from Fore Street, Custom House and City Hall in distance (NYPL b11707232-G89F237 013F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff",
+    "width": 2737,
+    "height": 1403,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff/lossy-page1-1920px-Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff/lossy-page1-500px-Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff/lossy-page1-1920px-Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.096,
+     0.073,
+     0.5,
+     0.118
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Up Exchange Street: the Custom House and City Hall in the distance. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20013F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_up_Exchange_from_Fore_Street%2C_Custom_House_and_City_Hall_in_distance_%28NYPL_b11707232-G89F237_013F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-north-from-fore",
+   "artist": "soule",
+   "title": "Looking north from Fore Street, at the foot of Exchange",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6566,
+    "lon": -70.2544,
+    "heading": 335,
+    "fov": 55,
+    "range": 500,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Exchange Street at Fore Street, looking north over the Old Port."
+   },
+   "image": {
+    "commons": "Looking northerly from Fore Street, at foot of Exchange (NYPL b11707232-G89F237 015F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff",
+    "width": 2737,
+    "height": 1376,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff/lossy-page1-1920px-Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff/lossy-page1-500px-Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff/lossy-page1-1920px-Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.092,
+     0.071,
+     0.504,
+     0.104
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "A surviving 'Clothing, Hats, Caps' block in the foreground, ruins behind. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20015F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_northerly_from_Fore_Street%2C_at_foot_of_Exchange_%28NYPL_b11707232-G89F237_015F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-exchange-to-city-hall",
+   "artist": "stereo",
+   "title": "Exchange Street, looking toward City Hall",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.657,
+    "lon": -70.2548,
+    "heading": 318,
+    "fov": 45,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title: City Hall closes the view up Exchange Street",
+    "note": "Exchange Street just below Middle, looking up toward City Hall."
+   },
+   "image": {
+    "commons": "Exchange Street, looking towards City Hall, Portland, Maine (NYPL b11707231-G89F234 012F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff",
+    "width": 3072,
+    "height": 1734,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff/lossy-page1-1920px-Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff/lossy-page1-500px-Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff/lossy-page1-1920px-Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.27,
+     0.525,
+     0.1
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Exchange Street rebuilt in brick and granite after the fire. Much of it survives in today's Old Port.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20012F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Exchange_Street%2C_looking_towards_City_Hall%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_012F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-middle-street-east",
+   "artist": "stereo",
+   "title": "Middle Street, looking east",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.65732,
+    "lon": -70.25563,
+    "heading": 45,
+    "fov": 50,
+    "range": 400,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Title only; elevated view from an upper window",
+    "note": "Middle Street near Exchange, looking north-east."
+   },
+   "image": {
+    "commons": "Middle Street, looking east, Portland, Maine (NYPL b11707231-G89F234 009F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff",
+    "width": 3072,
+    "height": 1708,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff/lossy-page1-1920px-Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff/lossy-page1-500px-Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff/lossy-page1-1920px-Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.11,
+     0.27,
+     0.525,
+     0.08
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Horse cars and awnings on the rebuilt Middle Street.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20009F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-middle-street-1898",
+   "artist": "detroit",
+   "title": "Middle Street",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65745,
+    "lon": -70.25545,
+    "heading": 45,
+    "fov": 45,
+    "range": 400,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject; heading assumed north-east",
+    "note": "Middle Street near Exchange, looking north-east."
+   },
+   "image": {
+    "commons": "Middle Street, Portland, Me (NYPL b12647398-67678).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff",
+    "width": 2496,
+    "height": 1661,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff/lossy-page1-1920px-Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff/lossy-page1-500px-Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff/lossy-page1-1920px-Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.075,
+     0.09,
+     0.16,
+     0.13
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Shop awnings, utility poles and a delivery wagon on Middle Street in the Old Port.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67678"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Middle_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67678%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-middle-from-lime",
+   "artist": "soule",
+   "title": "Middle Street from Lime Street, looking east",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.65814,
+    "lon": -70.25449,
+    "heading": 45,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Middle Street at Lime Street, looking north-east."
+   },
+   "image": {
+    "commons": "Middle from Lime Street, looking east (NYPL b11707232-G89F237 027F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff",
+    "width": 3072,
+    "height": 1683,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff/lossy-page1-1920px-Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff/lossy-page1-500px-Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff/lossy-page1-1920px-Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.127,
+     0.251,
+     0.538,
+     0.106
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Rubble piled along Middle Street, ready to rebuild. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20027F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Middle_from_Lime_Street%2C_looking_east_%28NYPL_b11707232-G89F237_027F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-middle-from-rich-free",
+   "artist": "soule",
+   "title": "Looking down Middle Street from Rich's printing office",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6562,
+    "lon": -70.2572,
+    "heading": 45,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; Rich's printing office stood at the corner of Free Street",
+    "note": "Middle Street at Free and Union Streets, looking north-east down Middle."
+   },
+   "image": {
+    "commons": "Looking down Middle St., from Rich's Printing Office, cor. Free St., showing portion of Union Street (NYPL b11707232-G89F237 004F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff",
+    "width": 2737,
+    "height": 1359,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff/lossy-page1-1920px-Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff/lossy-page1-500px-Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff/lossy-page1-1920px-Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/65/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.102,
+     0.092,
+     0.504,
+     0.105
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Middle Street from the Free Street end, with Union Street in the frame. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20004F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_cor._Free_St.%2C_showing_portion_of_Union_Street_%28NYPL_b11707232-G89F237_004F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-middle-temple-exchange",
+   "artist": "soule",
+   "title": "Looking down Middle Street, toward Temple and Exchange",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6562,
+    "lon": -70.2572,
+    "heading": 50,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Middle Street at Free Street, looking north-east toward Temple and Exchange Streets."
+   },
+   "image": {
+    "commons": "Looking down Middle St., from Rich's Printing Office, showing portion of Temple and Exchange Sts., and U.S. Custom House (NYPL b11707232-G89F237 005F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff",
+    "width": 2737,
+    "height": 1353,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff/lossy-page1-1920px-Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff/lossy-page1-500px-Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff/lossy-page1-1920px-Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.063,
+     0.502,
+     0.114
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "A carriage picks its way down a cleared Middle Street. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20005F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_down_Middle_St.%2C_from_Rich%27s_Printing_Office%2C_showing_portion_of_Temple_and_Exchange_Sts.%2C_and_U.S._Custom_House_%28NYPL_b11707232-G89F237_005F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-middle-from-free",
+   "artist": "soule",
+   "title": "Looking down Middle Street from Free Street",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6563,
+    "lon": -70.25707,
+    "heading": 45,
+    "fov": 50,
+    "range": 600,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Middle Street at Free Street, looking north-east. The Custom House is in the distance."
+   },
+   "image": {
+    "commons": "Looking down Middle Street, from Free Street. U.S. Custom House in distance (NYPL b11707232-G89F237 003F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff",
+    "width": 2737,
+    "height": 1355,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff/lossy-page1-1920px-Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff/lossy-page1-500px-Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff/lossy-page1-1920px-Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/7/77/Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.059,
+     0.5,
+     0.118
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Salvaged bricks stacked in the street, and the Custom House in the distance. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20003F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_down_Middle_Street%2C_from_Free_Street._U.S._Custom_House_in_distance_%28NYPL_b11707232-G89F237_003F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-down-free-street",
+   "artist": "soule",
+   "title": "Looking down Free Street",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.65554,
+    "lon": -70.26172,
+    "heading": 45,
+    "fov": 50,
+    "range": 500,
+    "confidence": "general",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866; spot along Free Street estimated",
+    "note": "Free Street between Congress Square and Middle Street, looking north-east."
+   },
+   "image": {
+    "commons": "Looking down Free Street (NYPL b11707232-G89F237 002F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff",
+    "width": 2737,
+    "height": 1376,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff/lossy-page1-1920px-Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff/lossy-page1-500px-Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff/lossy-page1-1920px-Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.083,
+     0.075,
+     0.508,
+     0.104
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "A gutted brick block towers over Free Street. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20002F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Looking_down_Free_Street_%28NYPL_b11707232-G89F237_002F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-congress-from-pearl",
+   "artist": "soule",
+   "title": "Congress Street from Pearl Street, looking north-east",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6593,
+    "lon": -70.2556,
+    "heading": 45,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Congress Street at Pearl Street, by Lincoln Park, looking north-east."
+   },
+   "image": {
+    "commons": "Congress, from Pearl Street, looking north-east (NYPL b11707232-G89F237 018F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff",
+    "width": 3072,
+    "height": 1729,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff/lossy-page1-1920px-Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff/lossy-page1-500px-Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff/lossy-page1-1920px-Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/83/Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.121,
+     0.252,
+     0.533,
+     0.122
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Chimneys and dead trees along Congress Street. Lincoln Park was laid out on burnt ground as a firebreak. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20018F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Congress%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_018F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-federal-from-pearl",
+   "artist": "soule",
+   "title": "Federal Street from Pearl Street, looking north-east",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6588,
+    "lon": -70.2551,
+    "heading": 45,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Federal Street at Pearl Street, looking north-east along the edge of Lincoln Park."
+   },
+   "image": {
+    "commons": "Federal, from Pearl Street, looking north-east (NYPL b11707232-G89F237 019F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff",
+    "width": 3072,
+    "height": 1709,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff/lossy-page1-1920px-Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff/lossy-page1-500px-Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff/lossy-page1-1920px-Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/7/73/Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.129,
+     0.266,
+     0.531,
+     0.112
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Federal Street's elms, killed by the heat, standing over the ruins. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20019F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Federal%2C_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_019F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-cumberland-from-pearl",
+   "artist": "soule",
+   "title": "Cumberland Street from Pearl Street, looking north-east",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66,
+    "lon": -70.2563,
+    "heading": 45,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Cumberland Avenue at Pearl Street, looking north-east."
+   },
+   "image": {
+    "commons": "Cumberland from Pearl Street, looking north-east (NYPL b11707232-G89F237 029F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff",
+    "width": 3072,
+    "height": 1704,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff/lossy-page1-1920px-Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff/lossy-page1-500px-Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff/lossy-page1-1920px-Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.127,
+     0.267,
+     0.531,
+     0.105
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "The fire stopped short of these elms on Cumberland Street.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20029F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Cumberland_from_Pearl_Street%2C_looking_north-east_%28NYPL_b11707232-G89F237_029F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-cumberland-from-pearl-1870s",
+   "artist": "stereo",
+   "title": "Cumberland Street, from Pearl Street looking east",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.66008,
+    "lon": -70.25619,
+    "heading": 50,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title gives the spot and direction",
+    "note": "Cumberland Avenue at Pearl Street, looking east."
+   },
+   "image": {
+    "commons": "Cumberland Street, Portland, Maine. (From Pearl St. looking east) (NYPL b11707231-G89F234 006F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff",
+    "width": 3072,
+    "height": 1659,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff/lossy-page1-1920px-Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff/lossy-page1-500px-Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff/lossy-page1-1920px-Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.125,
+     0.28,
+     0.52,
+     0.12
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Cumberland Street under its elms a few years after the fire.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20006F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Cumberland_Street%2C_Portland%2C_Maine._%28From_Pearl_St._looking_east%29_%28NYPL_b11707231-G89F234_006F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-pearl-from-federal",
+   "artist": "soule",
+   "title": "Pearl Street from Federal, looking down",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6588,
+    "lon": -70.2551,
+    "heading": 135,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Pearl Street at Federal Street, looking down the hill toward the harbor."
+   },
+   "image": {
+    "commons": "Pearl Street, from Federal, looking down (NYPL b11707232-G89F237 020F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff",
+    "width": 3072,
+    "height": 1697,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff/lossy-page1-1920px-Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff/lossy-page1-500px-Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff/lossy-page1-1920px-Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/25/Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.129,
+     0.253,
+     0.527,
+     0.109
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "Pearl Street falling away toward the waterfront through burnt-out blocks. Ten days after the Great Fire of 4 July 1866, which burned 1,800 buildings and left 10,000 people homeless. Soule hauled his stereo camera onto the surviving walls and roofs to record the ruins.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20020F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Pearl_Street%2C_from_Federal%2C_looking_down_%28NYPL_b11707232-G89F237_020F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-congress-lincoln-park",
+   "artist": "stereo",
+   "title": "Congress Street and Lincoln Park",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.65924,
+    "lon": -70.25569,
+    "heading": 45,
+    "fov": 45,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title: the park's gate pillars and fence are on the right",
+    "note": "Congress Street at the Lincoln Park corner, looking north-east with the park on your right."
+   },
+   "image": {
+    "commons": "Congress Street and Lincoln Park, Portland, Me (NYPL b11707231-G89F234 025F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff",
+    "width": 3072,
+    "height": 1769,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff/lossy-page1-1920px-Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff/lossy-page1-500px-Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff/lossy-page1-1920px-Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/30/Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.13,
+     0.3,
+     0.51,
+     0.14
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Lincoln Park when it was new: gas lamps, gate pillars and young trees on land cleared by the fire.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20025F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-1866-city-hall-ruins",
+   "artist": "soule",
+   "title": "City Hall",
+   "date": "1866",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.65871,
+    "lon": -70.257,
+    "heading": 330,
+    "fov": 50,
+    "range": 250,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "J. P. Soule's numbered series 'Ruins of the Great Fire in Portland', photographed 12–14 July 1866",
+    "note": "Across Congress Street from City Hall, a little east of the front steps, looking at the building."
+   },
+   "image": {
+    "commons": "City Hall (NYPL b11707232-G89F237 016F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff",
+    "width": 2737,
+    "height": 1370,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff/lossy-page1-1920px-City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff/lossy-page1-500px-City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff/lossy-page1-1920px-City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/10/City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.088,
+     0.071,
+     0.508,
+     0.104
+    ]
+   },
+   "rights": "Public domain (published 1866; NYPL Digital Collections).",
+   "blurb": "The 1862 City Hall, gutted but standing. The walls were reused in the rebuilt hall, which burned again in 1908.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707232-G89F237%20016F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:City_Hall_%28NYPL_b11707232-G89F237_016F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-city-hall-1898",
+   "artist": "detroit",
+   "title": "City Hall",
+   "date": "c. 1900–05",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65865,
+    "lon": -70.25706,
+    "heading": 325,
+    "fov": 55,
+    "range": 250,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject: the 1860s City Hall (burned 1908; replaced on the same site in 1912)",
+    "note": "Across Congress Street from City Hall at the head of Exchange Street, looking at the building."
+   },
+   "image": {
+    "commons": "City Hall, Portland, Me (NYPL b12647398-67679).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff",
+    "width": 2424,
+    "height": 1616,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff/lossy-page1-1920px-City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff/lossy-page1-500px-City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff/lossy-page1-1920px-City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1f/City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.075,
+     0.1,
+     0.19,
+     0.1
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The domed City Hall that burned in 1908. Today's hall, by Carrère & Hastings, stands on the same spot.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67679"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:City_Hall%2C_Portland%2C_Me_%28NYPL_b12647398-67679%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-view-city-hall-east",
+   "artist": "stereo",
+   "title": "View from City Hall, east",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6593,
+    "lon": -70.2573,
+    "heading": 70,
+    "fov": 50,
+    "range": 1200,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Title: taken from the City Hall roof; heading taken as along Congress Street",
+    "note": "Outside City Hall, looking east along Congress Street (the original was taken from the roof)."
+   },
+   "image": {
+    "commons": "View from City Hall, east. Portland, Me (NYPL b11707231-G89F234 032F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff",
+    "width": 3072,
+    "height": 1753,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff/lossy-page1-1920px-View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff/lossy-page1-500px-View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff/lossy-page1-1920px-View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/e/ee/View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.1,
+     0.4,
+     0.51,
+     0.08
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Rooftops of the rebuilt city from the City Hall roof.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20032F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:View_from_City_Hall%2C_east._Portland%2C_Me_%28NYPL_b11707231-G89F234_032F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-view-city-hall-ne",
+   "artist": "stereo",
+   "title": "View from City Hall, north-east",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6593,
+    "lon": -70.2573,
+    "heading": 40,
+    "fov": 50,
+    "range": 1200,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Title: taken from the City Hall roof",
+    "note": "Outside City Hall, looking north-east toward Munjoy Hill."
+   },
+   "image": {
+    "commons": "View from City Hall, north-east. Portland, Maine (NYPL b11707231-G89F234 033F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff",
+    "width": 3072,
+    "height": 1752,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff/lossy-page1-1920px-View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff/lossy-page1-500px-View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff/lossy-page1-1920px-View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/39/View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.125,
+     0.38,
+     0.51,
+     0.06
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "Church spires rising over the rebuilt neighborhoods north-east of City Hall.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20033F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:View_from_City_Hall%2C_north-east._Portland%2C_Maine_%28NYPL_b11707231-G89F234_033F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-back-bay-city-hall",
+   "artist": "stereo",
+   "title": "View of Back Bay from City Hall",
+   "date": "c. 1870s",
+   "kind": "photograph",
+   "medium": "Stereograph",
+   "collection": "New York Public Library, Robert N. Dennis collection of stereoscopic views",
+   "vantage": {
+    "lat": 43.6593,
+    "lon": -70.2573,
+    "heading": 323,
+    "fov": 55,
+    "range": 2000,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Title; Back Cove lies north-west of City Hall",
+    "note": "Outside City Hall, looking north-west toward Back Cove."
+   },
+   "image": {
+    "commons": "View of Back Bay from City Hall, Portland, Me (NYPL b11707231-G89F234 043F).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff",
+    "width": 3072,
+    "height": 1731,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff/lossy-page1-1920px-View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff/lossy-page1-500px-View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff/lossy-page1-1920px-View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.11,
+     0.3,
+     0.5,
+     0.08
+    ]
+   },
+   "rights": "Public domain (19th-century stereograph; NYPL Digital Collections).",
+   "blurb": "M. F. King's view over the roofs to Back Cove (the 'Back Bay'), long before I-295 ran along its shore.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b11707231-G89F234%20043F"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-monument-square",
+   "artist": "detroit",
+   "title": "Monument Square",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65689,
+    "lon": -70.25948,
+    "heading": 38,
+    "fov": 55,
+    "range": 300,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject; the City Hall dome on the skyline fixes the direction",
+    "note": "South-west end of Monument Square, looking north-east past Our Lady of Victories."
+   },
+   "image": {
+    "commons": "Monument Square, Portland, Me (NYPL b12647398-67677).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff",
+    "width": 2448,
+    "height": 1661,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff/lossy-page1-1920px-Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff/lossy-page1-500px-Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff/lossy-page1-1920px-Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.065,
+     0.1,
+     0.08,
+     0.2
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Market Square, renamed Monument Square once Franklin Simmons's Soldiers' and Sailors' Monument went up in 1891. The City Hall dome is on the skyline.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67677"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Monument_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67677%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-congress-toward-market-square",
+   "artist": "detroit",
+   "title": "Congress Street toward Monument Square",
+   "date": "c. 1905",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65668,
+    "lon": -70.26007,
+    "heading": 55,
+    "fov": 45,
+    "range": 400,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject; spot along Congress estimated",
+    "note": "Congress Street near the Wadsworth-Longfellow House, looking north-east toward Monument Square."
+   },
+   "image": {
+    "commons": "Congress Street toward Market Square, Portland, Me (NYPL b12647398-67675).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff",
+    "width": 2440,
+    "height": 1625,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff/lossy-page1-1920px-Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff/lossy-page1-500px-Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff/lossy-page1-1920px-Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/de/Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.071,
+     0.466,
+     0.365,
+     0.103
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Awnings, shoppers and a trolley on Portland's main shopping street.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67675"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Congress_Street_toward_Market_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67675%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-longfellow-house",
+   "artist": "detroit",
+   "title": "Wadsworth-Longfellow House",
+   "date": "c. 1905",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65667,
+    "lon": -70.25995,
+    "heading": 325,
+    "fov": 55,
+    "range": 120,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject: 489 Congress Street, the poet's boyhood home (Maine Historical Society)",
+    "note": "On the far side of Congress Street from the Wadsworth-Longfellow House, looking across at its front."
+   },
+   "image": {
+    "commons": "Longfellow House, Portland, Me (NYPL b12647398-68475).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff",
+    "width": 2360,
+    "height": 1572,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff/lossy-page1-1920px-Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff/lossy-page1-500px-Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff/lossy-page1-1920px-Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.05,
+     0.081,
+     0.169,
+     0.1
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Longfellow's boyhood home, built 1785–86 and the oldest standing building on the peninsula. It looks almost the same today.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-68475"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Longfellow_House%2C_Portland%2C_Me_%28NYPL_b12647398-68475%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-congress-square",
+   "artist": "detroit",
+   "title": "Congress Square",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65406,
+    "lon": -70.26347,
+    "heading": 20,
+    "fov": 55,
+    "range": 300,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject; heading estimated",
+    "note": "Congress Square, looking north up toward Congress Street and the church cupola."
+   },
+   "image": {
+    "commons": "Congress Square, Portland, Me (NYPL b12647398-67676).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff",
+    "width": 2472,
+    "height": 1625,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff/lossy-page1-1920px-Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff/lossy-page1-500px-Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff/lossy-page1-1920px-Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/db/Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.548,
+     0.098,
+     0.085,
+     0.193
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Trolleys crossing Congress Square. The cupola belongs to the Congress Square Church.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67676"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Congress_Square%2C_Portland%2C_Me_%28NYPL_b12647398-67676%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-longfellow-monument",
+   "artist": "detroit",
+   "title": "Longfellow's Monument",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65319,
+    "lon": -70.26704,
+    "heading": 225,
+    "fov": 40,
+    "range": 80,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject: Franklin Simmons's 1888 statue in Longfellow Square",
+    "note": "Longfellow Square, in front of the statue, looking at it."
+   },
+   "image": {
+    "commons": "Longfellow's Monument, Portland, Me (NYPL b12647398-68364).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff",
+    "width": 1572,
+    "height": 2368,
+    "web": "https://upload.wikimedia.org/wikipedia/commons/7/76/Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff/lossy-page1-500px-Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff.jpg",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/7/76/Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/7/76/Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.078,
+     0.156,
+     0.116,
+     0.129
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Franklin Simmons's seated Longfellow, unveiled 1888. It's still here.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-68364"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Longfellow%27s_Monument%2C_Portland%2C_Me_%28NYPL_b12647398-68364%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-state-street",
+   "artist": "detroit",
+   "title": "State Street",
+   "date": "c. 1905",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65462,
+    "lon": -70.26846,
+    "heading": 330,
+    "fov": 50,
+    "range": 400,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject; spot along State Street not known",
+    "note": "State Street north of Longfellow Square, looking up the hill toward Deering Oaks."
+   },
+   "image": {
+    "commons": "State Street, Portland, Me (NYPL b12647398-67765).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff",
+    "width": 2448,
+    "height": 1634,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff/lossy-page1-1920px-State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff/lossy-page1-500px-State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff/lossy-page1-1920px-State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.065,
+     0.112,
+     0.088,
+     0.169
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "State Street's elm-lined mansions. Many of the houses survive, but most of the elms went to Dutch elm disease.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67765"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:State_Street%2C_Portland%2C_Me_%28NYPL_b12647398-67765%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-williston-church",
+   "artist": "detroit",
+   "title": "Williston Church",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.6475,
+    "lon": -70.27079,
+    "heading": 315,
+    "fov": 55,
+    "range": 120,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject: 32 Thomas Street; the postcard calls it the 'birthplace of Christian Endeavor'",
+    "note": "Thomas Street at Carroll Street, looking at the church tower."
+   },
+   "image": {
+    "commons": "Williston Church, Portland, Me (NYPL b12647398-67683).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff",
+    "width": 2440,
+    "height": 1625,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff/lossy-page1-1920px-Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff/lossy-page1-500px-Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff/lossy-page1-1920px-Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.075,
+     0.097,
+     0.221,
+     0.147
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Francis E. Clark founded the Christian Endeavor youth movement here in 1881, and it went worldwide. The church still stands.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67683"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Williston_Church%2C_Portland%2C_Me_%28NYPL_b12647398-67683%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-western-prom-maine-general",
+   "artist": "detroit",
+   "title": "Western Promenade and Maine General Hospital",
+   "date": "c. 1905",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65197,
+    "lon": -70.27698,
+    "heading": 30,
+    "fov": 50,
+    "range": 400,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject; the hospital's 1870s building faces the Promenade",
+    "note": "Western Promenade near Bramhall Street, looking north-east across the lawn to the old hospital."
+   },
+   "image": {
+    "commons": "Western Promenade and Maine General Hospital, Portland, Me (NYPL b12647398-67684).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff",
+    "width": 2472,
+    "height": 1652,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff/lossy-page1-1920px-Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff/lossy-page1-500px-Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff/lossy-page1-1920px-Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/42/Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.321,
+     0.361,
+     0.425,
+     0.224
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The Maine General Hospital, opened in 1874, and the curving carriage drive of the Western Prom.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67684"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Western_Promenade_and_Maine_General_Hospital%2C_Portland%2C_Me_%28NYPL_b12647398-67684%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-western-prom-overlook",
+   "artist": "detroit",
+   "title": "Western Promenade",
+   "date": "c. 1905",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65254,
+    "lon": -70.27697,
+    "heading": 210,
+    "fov": 60,
+    "range": 1500,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Elevated view along the Promenade; probably from an upper floor near Bramhall Street",
+    "note": "Top of the Western Promenade near Bramhall, looking south-west along the bluff to the Fore River."
+   },
+   "image": {
+    "commons": "Western Promenade, Portland, Me (NYPL b12647398-75477).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff",
+    "width": 2376,
+    "height": 1599,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff/lossy-page1-1920px-Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff/lossy-page1-500px-Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff/lossy-page1-1920px-Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/db/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.06,
+     0.313,
+     0.06,
+     0.096
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The Olmsted-planned Promenade on the bluff, with the Fore River and Stroudwater marshes beyond.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-75477"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-75477%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-western-prom-walk",
+   "artist": "detroit",
+   "title": "Western Promenade",
+   "date": "1902",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.64884,
+    "lon": -70.27823,
+    "heading": 200,
+    "fov": 50,
+    "range": 400,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject; spot along the Promenade not known",
+    "note": "Along the Western Promenade walk, looking south-west."
+   },
+   "image": {
+    "commons": "Western Promenade, Portland, Me (NYPL b12647398-62676).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff",
+    "width": 2359,
+    "height": 1465,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff/lossy-page1-1920px-Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff/lossy-page1-500px-Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff/lossy-page1-1920px-Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.06,
+     0.11,
+     0.3,
+     0.19
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Shade trees along the Promenade walk.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-62676"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Western_Promenade%2C_Portland%2C_Me_%28NYPL_b12647398-62676%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-deering-park",
+   "artist": "detroit",
+   "title": "Deering Park",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65825,
+    "lon": -70.27115,
+    "heading": 300,
+    "fov": 55,
+    "range": 300,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject: the Deering Oaks pond; spot and heading estimated",
+    "note": "Deering Oaks, on the path along the pond's curved edge."
+   },
+   "image": {
+    "commons": "Deering Park, Portland, Me (NYPL b12647398-67686).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff",
+    "width": 2456,
+    "height": 1661,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff/lossy-page1-1920px-Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff/lossy-page1-500px-Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff/lossy-page1-1920px-Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.544,
+     0.114,
+     0.077,
+     0.182
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The pond's curving stone edge under the oaks, little changed in a century.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67686"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-67686%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-deering-fountain",
+   "artist": "detroit",
+   "title": "Fountain and Pond, Deering Park",
+   "date": "c. 1900–06",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65799,
+    "lon": -70.27125,
+    "heading": 330,
+    "fov": 55,
+    "range": 300,
+    "confidence": "general",
+    "access": "public",
+    "basis": "Subject: the Deering Oaks pond fountain; spot and heading estimated",
+    "note": "Deering Oaks, at the pond's edge, looking across to the fountain."
+   },
+   "image": {
+    "commons": "Fountain and Pond, Deering Park, Portland, Me (NYPL b12647398-75480).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff",
+    "width": 2344,
+    "height": 1590,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff/lossy-page1-1920px-Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff/lossy-page1-500px-Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff/lossy-page1-1920px-Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.056,
+     0.104,
+     0.052,
+     0.098
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The jet fountain in the Deering Oaks pond, which was a tidal inlet of Back Cove until the roads cut it off.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-75480"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Fountain_and_Pond%2C_Deering_Park%2C_Portland%2C_Me_%28NYPL_b12647398-75480%29.tiff"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-union-station-1909",
+   "artist": "detroit",
+   "title": "Union Station",
+   "date": "c. 1909",
+   "kind": "photograph",
+   "medium": "Glass negative",
+   "collection": "Library of Congress, Detroit Publishing Co. collection",
+   "vantage": {
+    "lat": 43.6515,
+    "lon": -70.27984,
+    "heading": 330,
+    "fov": 50,
+    "range": 300,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject: Union Station on St. John Street (1888; demolished 1961, now a strip mall)",
+    "note": "St. John Street at Congress, by the Union Station Plaza strip mall, looking north-west where the clock tower stood."
+   },
+   "image": {
+    "commons": "Detroit Publishing - Union Station, Portland, Me..jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg",
+    "width": 8987,
+    "height": 6347,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg/1920px-Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg/500px-Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg/3840px-Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/86/Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg",
+    "photo": "museum",
+    "crop": null
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "Its demolition in 1961 shocked the city into founding Greater Portland Landmarks.",
+   "links": [
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station%2C_Portland%2C_Me..jpg"
+    }
+   ],
+   "region": "portland"
+  },
+  {
+   "id": "pdx-union-station-1898",
+   "artist": "detroit",
+   "title": "Union Station",
+   "date": "c. 1900–05",
+   "kind": "photograph",
+   "medium": "Photochrom postcard",
+   "collection": "New York Public Library (Detroit Publishing Co. postcard)",
+   "vantage": {
+    "lat": 43.65152,
+    "lon": -70.28006,
+    "heading": 325,
+    "fov": 55,
+    "range": 300,
+    "confidence": "inferred",
+    "access": "public",
+    "basis": "Subject; tower and carriage court seen from the south-east",
+    "note": "St. John Street at Congress, looking north-west across the plaza."
+   },
+   "image": {
+    "commons": "Union Station, Portland, Me (NYPL b12647398-67681).tiff",
+    "page": "https://commons.wikimedia.org/wiki/File:Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff",
+    "width": 2440,
+    "height": 1616,
+    "web": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff/lossy-page1-1920px-Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff/lossy-page1-500px-Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff.jpg",
+    "full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff/lossy-page1-1920px-Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/98/Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff",
+    "photo": "museum",
+    "crop": [
+     0.06,
+     0.08,
+     0.26,
+     0.11
+    ]
+   },
+   "rights": "Public domain (Detroit Publishing Co., pre-1929; NYPL Digital Collections).",
+   "blurb": "The granite clock tower and turreted station, seen across the cab stand.",
+   "links": [
+    {
+     "label": "NYPL Digital Collections",
+     "url": "https://digitalcollections.nypl.org/search/index?keywords=b12647398-67681"
+    },
+    {
+     "label": "Wikimedia Commons",
+     "url": "https://commons.wikimedia.org/wiki/File:Union_Station%2C_Portland%2C_Me_%28NYPL_b12647398-67681%29.tiff"
+    }
+   ],
+   "region": "portland"
   },
   {
    "id": "lane-calm-sea-1860",
