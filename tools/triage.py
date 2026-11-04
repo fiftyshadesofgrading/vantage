@@ -5,6 +5,7 @@ triage.py — act on harvest/shortlist.tsv and harvest/rejects.tsv
     python3 tools/triage.py shortlist     # copy shortlisted analysis JPEGs to art/analysis/_shortlist/<tier>/ + contact sheets
     python3 tools/triage.py rejects       # MOVE rejected originals (+ sidecars) to art/library/_rejects/ (nothing deleted)
     python3 tools/triage.py restore       # move everything in _rejects back where it came from
+    python3 tools/triage.py pinned        # fill the 'pinned' column of shortlist.tsv from data/artworks.json
 
 Tiers: A = paintings/drawings at a findable place, B = prints, sketchbook pages, maps,
 P = historic photographs of named landmarks (best for exact then/now alignment).
@@ -56,6 +57,38 @@ def rejects():
     print(f"moved {n} files to {REJ.relative_to(ROOT)} — run 'restore' to undo")
 
 
+def pinned():
+    """write the catalogue id into a 'pinned' column of shortlist.tsv (blank = not in the catalogue yet)"""
+    import json
+    sys.path.insert(0, str(Path(__file__).parent))
+    from harvest import pinned_keys
+    pins = pinned_keys()
+    by_file = {}
+    for line in open(H / "downloads.jsonl", encoding="utf-8"):
+        d = json.loads(line)
+        for f in d.get("files", []):
+            by_file[Path(f).stem] = d["key"]
+    path = H / "shortlist.tsv"
+    raw = path.read_bytes().decode("utf-8")
+    nl = "\r\n" if "\r\n" in raw else "\n"
+    lines = raw.split(nl)
+    head = lines[0].split("\t")
+    has = head[-1] == "pinned"
+    fi = head.index("file")
+    out, n, rs = [lines[0] if has else lines[0] + "\tpinned"], 0, []
+    for line in lines[1:]:
+        if not line:
+            out.append(line); continue
+        cells = line.split("\t")
+        if has:
+            cells = cells[:-1]
+        pid = pins.get(by_file.get(cells[fi], ""), "")
+        n += bool(pid); rs.append(pid)
+        out.append("\t".join(cells + [pid]))
+    path.write_bytes(nl.join(out).encode("utf-8"))      # other columns untouched, byte for byte
+    print(f"shortlist.tsv: {n} of {len(rs)} rows already pinned")
+
+
 def restore():
     n = 0
     for f in REJ.rglob("*"):
@@ -66,5 +99,5 @@ def restore():
 
 
 if __name__ == "__main__":
-    {"shortlist": shortlist, "rejects": rejects, "restore": restore}.get(
+    {"shortlist": shortlist, "rejects": rejects, "restore": restore, "pinned": pinned}.get(
         (sys.argv[1:] or ["?"])[0], lambda: print(__doc__))()

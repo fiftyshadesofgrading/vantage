@@ -85,6 +85,23 @@ function imageUrl(it, size) {
   if (loc && loc[size]) return loc[size];
   return it.image[size] || it.image.web;
 }
+/**
+ * Thumbnail <img> honouring image.crop (stereo cards, postcard borders): the image is scaled and
+ * offset inside a clipping box so the box shows a centred, box-shaped piece of the cropped picture.
+ * aspect = box width / height. Without a crop, a plain <img> (object-fit: cover does the rest).
+ */
+function thumbImg(it, aspect, extra = "") {
+  const src = `src="${esc(imageUrl(it, "thumb"))}" data-remote="${esc(it._remote.thumb)}" alt="" loading="lazy" onerror="vantageImgRetry(this)"`;
+  const c = it.image.crop, W = it.image.width, H = it.image.height;
+  if (!c || !c.some(Boolean) || !W || !H) return `<img ${src}${extra}>`;
+  const [l, t, r, b] = c, cw = W * (1 - l - r), ch = H * (1 - t - b);
+  let rw = cw, rh = ch;
+  if (cw / ch > aspect) rw = ch * aspect; else rh = cw / aspect;
+  const rx = W * l + (cw - rw) / 2, ry = H * t + (ch - rh) / 2, pc = v => `${(v * 100).toFixed(2)}%`;
+  const st = `position:absolute;max-width:none;object-fit:fill;border-radius:0;width:${pc(W / rw)} !important;height:${pc(H / rh)} !important;left:${pc(-rx / rw)};top:${pc(-ry / rh)}`;
+  return `<span class="tb">${`<img ${src} style="${st}"${extra}>`}</span>`;
+}
+
 const visible = it => filter === "all" || it.artist === filter;
 /** list membership: the current region (items from regions without their own entry show under the first one) */
 const inRegion = it => (REGIONS[it.region] ? it.region : Object.keys(REGIONS)[0]) === REGION;
@@ -156,7 +173,7 @@ function drawMap() {
     const lead = items.find(i => i.id === selected?.id) || items[0];
     const conf = items.some(i => i.vantage.confidence === "documented") ? "documented" : items.some(i => i.vantage.confidence === "inferred") ? "inferred" : "general";
     const html = `<div class="pin conf-${conf}${lead.kind === "birdseye" ? " square" : ""}${items.some(i => i.id === selected?.id) ? " sel" : ""}" style="--c:${artist(lead).color}">
-        <img src="${esc(imageUrl(lead, "thumb"))}" data-remote="${esc(lead._remote.thumb)}" alt="" loading="lazy" onerror="vantageImgRetry(this)">
+        ${thumbImg(lead, 1)}
         ${items.length > 1 ? `<b>${items.length}</b>` : ""}${lead.calibrated ? '<i title="field-calibrated">✓</i>' : ""}</div>`;
     L.marker([g.at.lat, g.at.lon], { icon: L.divIcon({ html, className: "pin-wrap", iconSize: [46, 46], iconAnchor: [23, 23] }), title: items.map(i => i.title).join(" / "), riseOnHover: true })
       .on("click", () => select(items.includes(selected) ? selected : lead, { fly: false }))
@@ -244,7 +261,7 @@ function renderList() {
     <div class="sheet-head"><h1>${esc(REGIONS[REGION].label)}, as they saw it</h1>${intro}${chips()}</div>
     <ol class="list">${rows.map(({ it, d }) => `
       <li><button class="row" data-id="${esc(it.id)}">
-        <img src="${esc(imageUrl(it, "thumb"))}" data-remote="${esc(it._remote.thumb)}" alt="" loading="lazy" onerror="vantageImgRetry(this)">
+        ${thumbImg(it, 68 / 50)}
         <span class="txt"><b>${esc(it.title)}</b><span class="by" style="--c:${artist(it).color}">${esc(artist(it).name)} · ${esc(it.date)}</span></span>
         <span class="side">${d != null ? `<em>${fmtDist(d)}</em>` : ""}<i class="cdot conf-${it.vantage.confidence}" title="${it.vantage.confidence} vantage"></i></span>
       </button></li>`).join("")}</ol>
@@ -292,7 +309,7 @@ function renderDetail(it) {
       <p class="note">${esc(v.note)}</p>
       <p class="dir">${dir}${v.access === "water" ? " · painted from the water" : v.access === "private-view" ? " · exact spot is private ground" : ""}</p>
       ${it.blurb ? `<p class="blurb">${esc(it.blurb)}</p>` : ""}
-      ${group.length ? `<div class="stack"><h3>Also from this spot</h3>${group.map(g => `<button class="row mini" data-id="${esc(g.id)}"><img src="${esc(imageUrl(g, "thumb"))}" alt=""><span class="txt"><b>${esc(g.title)}</b><span class="by" style="--c:${artist(g).color}">${esc(artist(g).name)} · ${esc(g.date)}</span></span></button>`).join("")}</div>` : ""}
+      ${group.length ? `<div class="stack"><h3>Also from this spot</h3>${group.map(g => `<button class="row mini" data-id="${esc(g.id)}">${thumbImg(g, 56 / 42)}<span class="txt"><b>${esc(g.title)}</b><span class="by" style="--c:${artist(g).color}">${esc(artist(g).name)} · ${esc(g.date)}</span></span></button>`).join("")}</div>` : ""}
       <dl class="facts">
         <dt>Rights</dt><dd>${esc(it.rights)}</dd>
         <dt>Image</dt><dd>${esc(img.commons)}${img.best ? ` <small>(fetch_art.py will try the ${esc(img.best.source.toUpperCase())} original first)</small>` : ""}</dd>

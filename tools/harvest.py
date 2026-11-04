@@ -562,10 +562,32 @@ def download(args):
 
 
 # ── gallery ─────────────────────────────────────────────────────────────────
+def pinned_keys():
+    """manifest key -> catalogue id, for works already in data/artworks.json"""
+    try:
+        cat = json.loads((ROOT / "data" / "artworks.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    out = {}
+    for it in cat.get("items", []):
+        img = it.get("image") or {}
+        if img.get("commons"):
+            out["commons:" + img["commons"]] = it["id"]
+        for a in img.get("alt") or []:
+            out["commons:" + a["commons"]] = it["id"]
+        b = img.get("best")
+        if b and b.get("source") and b.get("id") is not None:
+            out[f"{b['source']}:{b['id']}"] = it["id"]
+    return out
+
+
 def gallery(args):
     items = load_manifest()
     done = load_dlog()
+    pins = pinned_keys()
     for c in items:
+        if c["key"] in pins:
+            c["pinned"] = pins[c["key"]]
         d = done.get(c["key"])
         if d:
             c["local"] = d["files"]; c["px"] = f"{d.get('width')}×{d.get('height')}"; c["mb"] = round(d.get("bytes", 0) / 1e6, 1)
@@ -595,7 +617,7 @@ main{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:
 .card .b{padding:8px 10px;display:flex;flex-direction:column;gap:3px;font-size:13.5px}
 .card b{font-weight:600;font-size:14.5px}.m{color:var(--ink2)}.tags{display:flex;flex-wrap:wrap;gap:4px}
 .tag{font-size:11.5px;border:1px solid var(--rule);border-radius:999px;padding:0 7px}
-.card.pick{outline:3px solid var(--amber)}label.pk{display:flex;gap:6px;align-items:center;margin-top:4px}
+.card.pick{outline:3px solid var(--amber)}.tag.pin{background:#2f6f7a;color:#fff;border-color:#2f6f7a}.card.pinned img{opacity:.75}label.pk{display:flex;gap:6px;align-items:center;margin-top:4px}
 a{color:#2f6f7a}
 </style></head><body>
 <header><h1>Vantage harvest</h1>
@@ -604,6 +626,7 @@ a{color:#2f6f7a}
 <select id="kind"><option value="">All kinds</option><option value="art">Art</option><option value="photograph">Photos</option><option value="birdseye">Bird's-eye</option><option value="sanborn">Sanborn maps</option><option value="habs">HABS</option></select>
 <select id="dl"><option value="">Any</option><option value="1">Downloaded</option><option value="0">Not yet</option></select>
 <input id="q" placeholder="search title, artist, place" size="24">
+<select id="pin"><option value="">Pinned or not</option><option value="1">Pinned</option><option value="0">Not pinned yet</option></select>
 <label><input type="checkbox" id="onlyPicks"> picks only</label>
 <button id="export">Export picks</button><span id="count"></span><span class="m" style="margin-left:auto;font-size:12px">built __WHEN__</span></header>
 <main id="grid"></main>
@@ -612,19 +635,19 @@ const DATA=__DATA__;let picks={};try{picks=JSON.parse(localStorage.getItem('vant
 const $=s=>document.querySelector(s),E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 [...new Set(DATA.map(d=>d.source))].sort().forEach(s=>$('#src').insertAdjacentHTML('beforeend',`<option>${s}</option>`));
 const kindOf=d=>['photograph','birdseye','sanborn','habs'].includes(d.kind)||/photo/.test(d.kind)?(/photo/.test(d.kind)?'photograph':d.kind):'art';
-function draw(){const r=$('#reg').value,s=$('#src').value,k=$('#kind').value,dl=$('#dl').value,q=$('#q').value.toLowerCase(),op=$('#onlyPicks').checked;
- const rows=DATA.filter(d=>(!r||d.regions.includes(r))&&(!s||d.source===s)&&(!k||kindOf(d)===k)&&(!dl||(dl==='1')===!!d.local)&&(!op||picks[d.key])&&(!q||(d.title+' '+d.artist+' '+d.places.join(' ')+' '+d.date).toLowerCase().includes(q)));
- $('#count').textContent=`${rows.length} of ${DATA.length} · ${Object.keys(picks).length} picked`;
- $('#grid').innerHTML=rows.slice(0,1500).map(d=>`<div class="card${picks[d.key]?' pick':''}" data-k="${E(d.key)}">
+function draw(){const r=$('#reg').value,s=$('#src').value,k=$('#kind').value,dl=$('#dl').value,q=$('#q').value.toLowerCase(),op=$('#onlyPicks').checked,pn=$('#pin').value;
+ const rows=DATA.filter(d=>(!r||d.regions.includes(r))&&(!s||d.source===s)&&(!k||kindOf(d)===k)&&(!dl||(dl==='1')===!!d.local)&&(!op||picks[d.key])&&(!pn||(pn==='1')===!!d.pinned)&&(!q||(d.title+' '+d.artist+' '+d.places.join(' ')+' '+d.date).toLowerCase().includes(q)));
+ $('#count').textContent=`${rows.length} of ${DATA.length} · ${DATA.filter(d=>d.pinned).length} pinned · ${Object.keys(picks).length} picked`;
+ $('#grid').innerHTML=rows.slice(0,1500).map(d=>`<div class="card${picks[d.key]?' pick':''}${d.pinned?' pinned':''}" data-k="${E(d.key)}">
   <a href="${E(d.local?d.local[0]:d.page)}" target="_blank"><img loading="lazy" src="${E(d.thumb||'')}" alt=""></a>
   <div class="b"><b>${E(d.title)}</b><span class="m">${E(d.artist||'')} · ${E(d.date)}</span>
-  <div class="tags">${d.places.slice(0,4).map(p=>`<span class="tag">${E(p)}</span>`).join('')}<span class="tag">${E(d.source)}</span>${d.px?`<span class="tag">${E(d.px)} · ${d.mb} MB</span>`:''}</div>
+  <div class="tags">${d.pinned?`<span class="tag pin" title="${E(d.pinned)}">📍 pinned</span>`:''}${d.places.slice(0,4).map(p=>`<span class="tag">${E(p)}</span>`).join('')}<span class="tag">${E(d.source)}</span>${d.px?`<span class="tag">${E(d.px)} · ${d.mb} MB</span>`:''}</div>
   <span><a href="${E(d.page)}" target="_blank">source ↗</a></span>
   <label class="pk"><input type="checkbox" ${picks[d.key]?'checked':''}> use in Vantage</label></div></div>`).join('');}
 $('#grid').addEventListener('change',e=>{const c=e.target.closest('.card');if(!c)return;const k=c.dataset.k;if(e.target.checked)picks[k]=1;else delete picks[k];
  try{localStorage.setItem('vantage.picks',JSON.stringify(picks))}catch(_){}c.classList.toggle('pick',!!picks[k]);draw();});
 $('#export').onclick=()=>{const out=DATA.filter(d=>picks[d.key]);const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:'application/json'}));a.download='vantage-picks.json';a.click();};
-['#reg','#src','#kind','#dl','#onlyPicks'].forEach(s=>$(s).onchange=draw);$('#q').oninput=draw;draw();
+['#reg','#src','#kind','#dl','#pin','#onlyPicks'].forEach(s=>$(s).onchange=draw);$('#q').oninput=draw;draw();
 </script></body></html>"""
 
 

@@ -164,6 +164,12 @@ body.far .pin b { transform: scale(.85); }
 .stack h3 { font: 19px var(--display); margin: 16px 0 4px; }
 .row.mini { grid-template-columns: 56px 1fr; padding: 6px 0; }
 .row.mini img { width: 56px; height: 42px; }
+/* clipping box for cropped thumbnails (see thumbImg in app.js) */
+.tb { position: relative; display: block; overflow: hidden; flex: none; }
+.pin .tb { position: absolute; inset: 0; border-radius: 50%; }
+.pin.square .tb { border-radius: 9px; }
+.row .tb { width: 68px; height: 50px; border-radius: 5px; background: var(--paper-2); box-shadow: 0 1px 0 var(--rule); }
+.row.mini .tb { width: 56px; height: 42px; }
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 13px; color: var(--ink-2); border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 16px; }
 .facts dt { font-weight: 600; color: var(--ink); }
 .facts dd { margin: 0; word-break: break-word; }
