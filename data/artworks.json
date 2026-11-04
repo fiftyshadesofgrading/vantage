@@ -3933,8 +3933,8 @@
     "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Entrance_to_Portland_Harbor%2C_Maine._Looking_s.-e._from_observatory_on_Munjoy_Hill_%28NYPL_b11707231-G89F234_079ZF%29.tiff",
     "photo": "museum",
     "crop": [
-     0.1,
-     0.24,
+     0.12,
+     0.25,
      0.51,
      0.08
     ]
@@ -5074,7 +5074,7 @@
     "original": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Middle_Street%2C_looking_east%2C_Portland%2C_Maine_%28NYPL_b11707231-G89F234_009F%29.tiff",
     "photo": "museum",
     "crop": [
-     0.11,
+     0.125,
      0.27,
      0.525,
      0.08
@@ -5674,9 +5674,9 @@
     "original": "https://upload.wikimedia.org/wikipedia/commons/3/30/Congress_Street_and_Lincoln_Park%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_025F%29.tiff",
     "photo": "museum",
     "crop": [
-     0.13,
-     0.3,
-     0.51,
+     0.135,
+     0.33,
+     0.525,
      0.14
     ]
    },
@@ -5924,7 +5924,7 @@
     "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/View_of_Back_Bay_from_City_Hall%2C_Portland%2C_Me_%28NYPL_b11707231-G89F234_043F%29.tiff",
     "photo": "museum",
     "crop": [
-     0.11,
+     0.12,
      0.3,
      0.5,
      0.08

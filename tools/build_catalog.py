@@ -865,7 +865,7 @@ CATALOG = [
     # ── Portland, Maine: photographs (Old Port, Munjoy Hill, Congress St, West End, Deering Oaks) ──
     dict(id='pdx-harbor-entrance-observatory', artist='stereo', title='Entrance to Portland Harbor, from the Observatory',
          date='c. 1870s', kind='photograph', medium='Stereograph', collection='New York Public Library, Robert N. Dennis collection of stereoscopic views',
-         commons='Entrance to Portland Harbor, Maine. Looking s.-e. from observatory on Munjoy Hill (NYPL b11707231-G89F234 079ZF).tiff', photo='museum', crop=[0.1, 0.24, 0.51, 0.08],
+         commons='Entrance to Portland Harbor, Maine. Looking s.-e. from observatory on Munjoy Hill (NYPL b11707231-G89F234 079ZF).tiff', photo='museum', crop=[0.12, 0.25, 0.51, 0.08],
          region='portland',
          vantage=dict(lat=43.66528, lon=-70.24833, heading=135, fov=50, range=3000, confidence='inferred', access='public',
                       basis="Title: 'looking s.-e. from observatory on Munjoy Hill'",
@@ -1095,7 +1095,7 @@ CATALOG = [
 
     dict(id='pdx-middle-street-east', artist='stereo', title='Middle Street, looking east',
          date='c. 1870s', kind='photograph', medium='Stereograph', collection='New York Public Library, Robert N. Dennis collection of stereoscopic views',
-         commons='Middle Street, looking east, Portland, Maine (NYPL b11707231-G89F234 009F).tiff', photo='museum', crop=[0.11, 0.27, 0.525, 0.08],
+         commons='Middle Street, looking east, Portland, Maine (NYPL b11707231-G89F234 009F).tiff', photo='museum', crop=[0.125, 0.27, 0.525, 0.08],
          region='portland',
          vantage=dict(lat=43.65732, lon=-70.25563, heading=45, fov=50, range=400, confidence='general', access='public',
                       basis='Title only; elevated view from an upper window',
@@ -1215,7 +1215,7 @@ CATALOG = [
 
     dict(id='pdx-congress-lincoln-park', artist='stereo', title='Congress Street and Lincoln Park',
          date='c. 1870s', kind='photograph', medium='Stereograph', collection='New York Public Library, Robert N. Dennis collection of stereoscopic views',
-         commons='Congress Street and Lincoln Park, Portland, Me (NYPL b11707231-G89F234 025F).tiff', photo='museum', crop=[0.13, 0.3, 0.51, 0.14],
+         commons='Congress Street and Lincoln Park, Portland, Me (NYPL b11707231-G89F234 025F).tiff', photo='museum', crop=[0.135, 0.33, 0.525, 0.14],
          region='portland',
          vantage=dict(lat=43.65924, lon=-70.25569, heading=45, fov=45, range=400, confidence='inferred', access='public',
                       basis="Title: the park's gate pillars and fence are on the right",
@@ -1265,7 +1265,7 @@ CATALOG = [
 
     dict(id='pdx-back-bay-city-hall', artist='stereo', title='View of Back Bay from City Hall',
          date='c. 1870s', kind='photograph', medium='Stereograph', collection='New York Public Library, Robert N. Dennis collection of stereoscopic views',
-         commons='View of Back Bay from City Hall, Portland, Me (NYPL b11707231-G89F234 043F).tiff', photo='museum', crop=[0.11, 0.3, 0.5, 0.08],
+         commons='View of Back Bay from City Hall, Portland, Me (NYPL b11707231-G89F234 043F).tiff', photo='museum', crop=[0.12, 0.3, 0.5, 0.08],
          region='portland',
          vantage=dict(lat=43.6593, lon=-70.2573, heading=323, fov=55, range=2000, confidence='inferred', access='public',
                       basis='Title; Back Cove lies north-west of City Hall',
