@@ -1628,12 +1628,14 @@ def image_block(e):
     name = e["commons"]
     w, h = SIZES[name]
     is_tif = name.lower().endswith((".tif", ".tiff"))
-    web = thumb_url(name, 1920) if w > 1920 else orig_url(name)
+    # browsers can't show TIFF: always use a JPEG thumbnail, at the largest standard width below the original
+    tif_w = next((b for b in (1920, 1280, 960, 500) if b < w), 500)
+    web = thumb_url(name, 1920) if w > 1920 else (thumb_url(name, tif_w) if is_tif else orig_url(name))
     thumb = thumb_url(name, 500) if w > 500 else orig_url(name)
     if w > 3840:
         full = thumb_url(name, 3840)
     elif is_tif:
-        full = thumb_url(name, 1920) if w > 1920 else orig_url(name)  # browsers can't show TIFF
+        full = thumb_url(name, 1920) if w > 1920 else thumb_url(name, tif_w)  # browsers can't show TIFF
     else:
         full = orig_url(name)
     blk = {

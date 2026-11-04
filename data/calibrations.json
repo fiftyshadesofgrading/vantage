@@ -52,56 +52,6 @@
    "updated": "2026-11-04T15:21:40.400Z",
    "note": "re-based 2026-11-04 from a bad catalogue crop to the full picture"
   },
-  "pdx-state-street": {
-   "overlay": {
-    "cx": 0,
-    "cy": 0,
-    "w": 1.3926761778714636,
-    "rot": 0
-   },
-   "crop": [
-    0.065,
-    0.112,
-    0.088,
-    0.169
-   ],
-   "camFov": 65,
-   "screen": [
-    411,
-    782
-   ],
-   "lat": 43.654201,
-   "lon": -70.267279,
-   "acc": 5,
-   "fov": 50,
-   "heading": 327,
-   "updated": "2026-11-04T15:28:58.474Z"
-  },
-  "pdx-longfellow-monument": {
-   "overlay": {
-    "cx": 0,
-    "cy": 0,
-    "w": 1.087034848885855,
-    "rot": 0
-   },
-   "crop": [
-    0.078,
-    0.156,
-    0.116,
-    0.129
-   ],
-   "camFov": 65,
-   "screen": [
-    411,
-    782
-   ],
-   "lat": 43.65305,
-   "lon": -70.266879,
-   "acc": 7,
-   "fov": 40,
-   "heading": 148,
-   "updated": "2026-11-04T15:31:41.404Z"
-  },
   "pdx-congress-square": {
    "overlay": {
     "cx": -0.1811,
