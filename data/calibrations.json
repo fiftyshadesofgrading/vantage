@@ -1,4 +1,182 @@
 {
- "about": "Field calibrations shared with every device. Replace with a file exported from the app (How this works > Export).",
- "calibrations": {}
+ "about": "Field calibrations shared with every device. Merge new exports from the app (How this works > Export) into this file.",
+ "calibrations": {
+  "pdx-deering-fountain": {
+   "overlay": {
+    "cx": 0,
+    "cy": 0.06724523707179958,
+    "w": 0.6451361158437542,
+    "rot": 1.1864021210345186
+   },
+   "crop": [
+    0.056,
+    0.104,
+    0.052,
+    0.098
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.657799,
+   "lon": -70.26911,
+   "acc": 4,
+   "fov": 24.4,
+   "heading": 322,
+   "updated": "2026-11-04T15:19:38.010Z"
+  },
+  "pdx-deering-park": {
+   "overlay": {
+    "cx": -0.3183,
+    "cy": 0.0322,
+    "w": 1.1725,
+    "rot": 0.5847235739719281
+   },
+   "crop": [
+    0.07,
+    0.1,
+    0.07,
+    0.16
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.657464,
+   "lon": -70.269271,
+   "acc": 3,
+   "fov": 42.9,
+   "heading": 347.0,
+   "updated": "2026-11-04T15:21:40.400Z",
+   "note": "re-based 2026-11-04 from a bad catalogue crop to the full picture"
+  },
+  "pdx-state-street": {
+   "overlay": {
+    "cx": 0,
+    "cy": 0,
+    "w": 1.3926761778714636,
+    "rot": 0
+   },
+   "crop": [
+    0.065,
+    0.112,
+    0.088,
+    0.169
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.654201,
+   "lon": -70.267279,
+   "acc": 5,
+   "fov": 50,
+   "heading": 327,
+   "updated": "2026-11-04T15:28:58.474Z"
+  },
+  "pdx-longfellow-monument": {
+   "overlay": {
+    "cx": 0,
+    "cy": 0,
+    "w": 1.087034848885855,
+    "rot": 0
+   },
+   "crop": [
+    0.078,
+    0.156,
+    0.116,
+    0.129
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.65305,
+   "lon": -70.266879,
+   "acc": 7,
+   "fov": 40,
+   "heading": 148,
+   "updated": "2026-11-04T15:31:41.404Z"
+  },
+  "pdx-congress-square": {
+   "overlay": {
+    "cx": -0.1811,
+    "cy": -0.0182,
+    "w": 0.6648,
+    "rot": -1.4359531706171822
+   },
+   "crop": [
+    0.075,
+    0.09,
+    0.075,
+    0.19
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.653673,
+   "lon": -70.264314,
+   "acc": 4,
+   "fov": 25.1,
+   "heading": 45.1,
+   "updated": "2026-11-04T15:34:31.877Z",
+   "note": "re-based 2026-11-04 from a bad catalogue crop to the full picture"
+  },
+  "pdx-monument-square": {
+   "overlay": {
+    "cx": 0,
+    "cy": -0.06368666031943014,
+    "w": 1.1126897131046902,
+    "rot": 0.552948776097395
+   },
+   "crop": [
+    0.065,
+    0.1,
+    0.08,
+    0.2
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.657112,
+   "lon": -70.259389,
+   "acc": 4,
+   "fov": 40.9,
+   "heading": 30,
+   "updated": "2026-11-04T15:50:55.408Z"
+  },
+  "pdx-exchange-to-city-hall": {
+   "overlay": {
+    "cx": 0,
+    "cy": -0.06853084466886948,
+    "w": 0.981640031682433,
+    "rot": 1.6313743776413503
+   },
+   "crop": [
+    0.1,
+    0.27,
+    0.525,
+    0.1
+   ],
+   "camFov": 65,
+   "screen": [
+    411,
+    782
+   ],
+   "lat": 43.658479,
+   "lon": -70.255993,
+   "acc": 4,
+   "fov": 36.4,
+   "heading": 311,
+   "updated": "2026-11-04T16:00:18.452Z"
+  }
+ }
 }

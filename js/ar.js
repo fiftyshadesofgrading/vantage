@@ -258,6 +258,9 @@ function guide() {
 function bindGestures() {
   const pts = new Map();
   let base = null;
+  // tap tracking: only a quick, still, single-finger touch counts toward a double-tap reset.
+  // (Lifting two fingers after a pinch sends two pointerups a few ms apart — that is NOT a double-tap.)
+  let touch = null, lastTap = null;
   const rebase = () => {
     const arr = [...pts.values()];
     base = { st: { ...st }, arr: arr.map(p => ({ ...p })), center: displayed() };
@@ -266,14 +269,27 @@ function bindGestures() {
     if (e.target.closest(".ar-ui") || e.target === E.split || E.split.contains(e.target)) return;
     E.root.setPointerCapture(e.pointerId);
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pts.size === 1) touch = { t: Date.now(), x: e.clientX, y: e.clientY, moved: 0, multi: false };
+    else if (touch) touch.multi = true;
     rebase();
   });
-  const up = e => { if (pts.delete(e.pointerId)) rebase(); };
+  const up = e => {
+    if (!pts.delete(e.pointerId)) return;
+    rebase();
+    if (pts.size || !touch) return;
+    const g = touch; touch = null;
+    const isTap = e.type === "pointerup" && !g.multi && g.moved < 12 && Date.now() - g.t < 300;
+    if (!isTap) { lastTap = null; return; }
+    if (lastTap && Date.now() - lastTap.t < 350 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 40) {
+      lastTap = null; fitDefault(); schedule();
+    } else lastTap = { t: Date.now(), x: e.clientX, y: e.clientY };
+  };
   E.root.addEventListener("pointerup", up);
   E.root.addEventListener("pointercancel", up);
   E.root.addEventListener("pointermove", e => {
     if (!pts.has(e.pointerId) || !base) return;
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (touch) touch.moved = Math.max(touch.moved, Math.hypot(e.clientX - touch.x, e.clientY - touch.y));
     const W = innerWidth, H = innerHeight, now = [...pts.values()];
     if (now.length === 1 || base.arr.length === 1) {
       const p = now[0], p0 = base.arr[0];
@@ -302,13 +318,8 @@ function bindGestures() {
     else st.w = clamp(st.w * (e.deltaY > 0 ? 0.97 : 1.03), 0.05, 12);
     schedule();
   }, { passive: false });
-  let lastTap = 0;
-  E.root.addEventListener("pointerup", e => {
-    if (e.target.closest(".ar-ui")) return;
-    const now = Date.now();
-    if (now - lastTap < 300) { fitDefault(); schedule(); }
-    lastTap = now;
-  });
+  // iOS Safari: stop its own pinch-zoom/rotate gestures from fighting ours
+  ["gesturestart", "gesturechange", "gestureend"].forEach(t => E.root.addEventListener(t, e => e.preventDefault()));
 }
 function bindSplit() {
   let dragging = false;

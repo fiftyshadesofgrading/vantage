@@ -1285,7 +1285,7 @@ CATALOG = [
 
     dict(id='pdx-congress-toward-market-square', artist='detroit', title='Congress Street toward Monument Square',
          date='c. 1905', kind='photograph', medium='Photochrom postcard', collection='New York Public Library (Detroit Publishing Co. postcard)',
-         commons='Congress Street toward Market Square, Portland, Me (NYPL b12647398-67675).tiff', photo='museum', crop=[0.071, 0.466, 0.365, 0.103],
+         commons='Congress Street toward Market Square, Portland, Me (NYPL b12647398-67675).tiff', photo='museum', crop=[0.075, 0.105, 0.19, 0.11],
          region='portland',
          vantage=dict(lat=43.65668, lon=-70.26007, heading=55, fov=45, range=400, confidence='general', access='public',
                       basis='Subject; spot along Congress estimated',
@@ -1305,7 +1305,7 @@ CATALOG = [
 
     dict(id='pdx-congress-square', artist='detroit', title='Congress Square',
          date='c. 1900–06', kind='photograph', medium='Photochrom postcard', collection='New York Public Library (Detroit Publishing Co. postcard)',
-         commons='Congress Square, Portland, Me (NYPL b12647398-67676).tiff', photo='museum', crop=[0.548, 0.098, 0.085, 0.193],
+         commons='Congress Square, Portland, Me (NYPL b12647398-67676).tiff', photo='museum', crop=[0.075, 0.09, 0.075, 0.19],
          region='portland',
          vantage=dict(lat=43.65406, lon=-70.26347, heading=20, fov=55, range=300, confidence='general', access='public',
                       basis='Subject; heading estimated',
@@ -1345,7 +1345,7 @@ CATALOG = [
 
     dict(id='pdx-western-prom-maine-general', artist='detroit', title='Western Promenade and Maine General Hospital',
          date='c. 1905', kind='photograph', medium='Photochrom postcard', collection='New York Public Library (Detroit Publishing Co. postcard)',
-         commons='Western Promenade and Maine General Hospital, Portland, Me (NYPL b12647398-67684).tiff', photo='museum', crop=[0.321, 0.361, 0.425, 0.224],
+         commons='Western Promenade and Maine General Hospital, Portland, Me (NYPL b12647398-67684).tiff', photo='museum', crop=[0.085, 0.105, 0.07, 0.215],
          region='portland',
          vantage=dict(lat=43.65197, lon=-70.27698, heading=30, fov=50, range=400, confidence='inferred', access='public',
                       basis="Subject; the hospital's 1870s building faces the Promenade",
@@ -1355,7 +1355,7 @@ CATALOG = [
 
     dict(id='pdx-western-prom-overlook', artist='detroit', title='Western Promenade',
          date='c. 1905', kind='photograph', medium='Photochrom postcard', collection='New York Public Library (Detroit Publishing Co. postcard)',
-         commons='Western Promenade, Portland, Me (NYPL b12647398-75477).tiff', photo='museum', crop=[0.06, 0.313, 0.06, 0.096],
+         commons='Western Promenade, Portland, Me (NYPL b12647398-75477).tiff', photo='museum', crop=[0.06, 0.1, 0.06, 0.095],
          region='portland',
          vantage=dict(lat=43.65254, lon=-70.27697, heading=210, fov=60, range=1500, confidence='general', access='public',
                       basis='Elevated view along the Promenade; probably from an upper floor near Bramhall Street',
@@ -1375,7 +1375,7 @@ CATALOG = [
 
     dict(id='pdx-deering-park', artist='detroit', title='Deering Park',
          date='c. 1900–06', kind='photograph', medium='Photochrom postcard', collection='New York Public Library (Detroit Publishing Co. postcard)',
-         commons='Deering Park, Portland, Me (NYPL b12647398-67686).tiff', photo='museum', crop=[0.544, 0.114, 0.077, 0.182],
+         commons='Deering Park, Portland, Me (NYPL b12647398-67686).tiff', photo='museum', crop=[0.07, 0.1, 0.07, 0.16],
          region='portland',
          vantage=dict(lat=43.65825, lon=-70.27115, heading=300, fov=55, range=300, confidence='general', access='public',
                       basis='Subject: the Deering Oaks pond; spot and heading estimated',
