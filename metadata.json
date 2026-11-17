@@ -1,0 +1,20 @@
+{
+  "title": "Vantage: where the art was made",
+  "description": "Public-domain artworks pinned to the places they were painted.",
+  "source": "herebe.art",
+  "license": "CC BY 4.0",
+  "databases": {
+    "vantage": {
+      "tables": {
+        "artworks": {
+          "plugins": {
+            "datasette-cluster-map": {
+              "latitude_column": "latitude",
+              "longitude_column": "longitude"
+            }
+          }
+        }
+      }
+    }
+  }
+}
